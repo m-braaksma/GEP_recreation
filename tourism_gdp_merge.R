@@ -56,3 +56,5 @@ df_join <- left_join(gdp_df, tourism_df)
 # Generate Tourism GDP
 df_join$gdp_tourism_usd <- df_join$gdp_usd * (df_join$gdp_tourism_prop/100)
 
+# Save csv file to wd
+write_csv(df_join, "gep_tourism.csv")
