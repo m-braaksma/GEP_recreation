@@ -1,0 +1,90 @@
+---
+title: 'Ecosystem Service of Recreation for GEP'
+author:
+  - name: Matthew Braaksma
+    affiliations:
+      - id: umn
+        name: University of Minnesota
+  - name: Lifeng Ren
+    affiliations:
+      - ref: umn
+  - name: Spencer Wood
+    affiliations:
+      - id: uw
+        name: University of Washington
+  - name: Ryan McWay
+    affiliations:
+      - ref: umn
+date: 09/20/2024
+date-format: long
+format: revealjs
+---
+
+
+# Motivation
+
+- We want to estimate the monetary value of recreation as an ecosystem service.
+- We would like to do this credibly at a global scale to produce a country-year panel.
+- This is a subcomponent of the larger GEP value for each nation and likely a sizeable value.
+
+# Components of Recreation GEP
+
+- Nature-based recreation can be sub-divided by the type of recreation (park, camping, beach, lake activites, eco-tourism, etc.). 
+- The key distinction for nature-based recreation is that these are activities where the main attraction (or attribute deriving utility) comers from nature. 
+- For our purposes, we can start by narrowing our examination to camping or hiking recreation in protected areas. But in general, we can modify the following approach to consider a wider definition of nature-based recreation.
+
+# Previous Estimates of Recreation Value
+
+- 
+
+# GEP Formula
+
+Deterministics (accounting) formula:
+Panel of monetary value over year $t$ and country $c$
+Requires aggreagtion to value by year and country to be consistent with system of national accounts (SNA) as presented with SEEA accounts. 
+
+$$
+GEP_{i,t} = \lambda \cdot (P_{i,t} \cdot Q_{i,t})
+$$
+
+- $\lambda$: Nature's contribution
+- $P$: Price
+- $Q$: Quantity
+
+While $\lambda$ may vary over time and space, there is a theoretical and empirical decision to assert it is constant. Empirically, difficult to measure a change over time. Theoretically, if the value of recreation comes from contributions of land, labor, and capital -- is the relative contribution of land compared to labor and capital changing (meaningfully) over time? Does it vary over country (componsition of the country)? Probably linked to structural transformation (development of a country).
+
+
+# Estimating Quantity $Q$
+
+- Main issue: Not observing park vistors in systematic way across global and across time.
+
+Propensity to Visit: likelihood function using attributes of the park that are attractive and the distance of the park to determine the number of visitors are park gets each year
+- Calibrate the likelihood function with recorded measures of the number of vistors to a park (bonus if we know where they came from)
+- Using info on population size for each grid cell, we can then determine the number of people visiting from from grid cell and total vistattion to each park.
+
+# Estimating Price $P$
+
+- Main issue: (1) do not observe prices (2) most recreation is often free access or subsidized
+
+Willingness to Pay (WTP) through revealed preference of travel cost
+- Need to use multinominal logit model on attributes of the park (particularly distance to park)
+- f(e) is logisitic
+- V(x,s) = travel cost (determined by distance and cost of gasoline) s.t. to incomes (proxy by average income for a gridded cell)
+- g(B) = variation over distribution of heterogenous taste/attribute of visitors: domestics/international, urban/rural, income
+
+# Estimating Nature's Contribution $\lambda$
+
+- Something out of gtap. Alternatively, we can try to use a hedonic model on prices.
+
+# Data Requirements
+
+- World Protected Areas Database
+    - Shapefiles for location and size of existing protected areas and when they open (allows for dyanmic component)
+- InVEST Scenic Quality Model
+    - https://naturalcapitalproject.stanford.edu/invest/scenic-quality
+    - Determine avg (or max) attractiveness of each park 
+    - Need info on viewpoints, visibility of view points (DEM), and weight for value of each view point (relative value)
+- Gridded Population Data
+    - \# of people in each grid cell and where they live. 
+- Incomes at sub-national level
+    - Assign as the average income (budget constraint) for people in given grid cells
