@@ -22,6 +22,10 @@ format:
     toc: true
     html-math-method: katex
     css: styles.css
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
 ---
 
 

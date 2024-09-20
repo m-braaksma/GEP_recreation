@@ -1,0 +1,1054 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Ecosystem Service of Recreation for GEP},
+  pdfauthor={Matthew Braaksma; Lifeng Ren; Spencer Wood; Ryan McWay},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Ecosystem Service of Recreation for GEP}
+\author{Matthew Braaksma \and Lifeng Ren \and Spencer Wood \and Ryan
+McWay}
+\date{September 20, 2024}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, enhanced, sharp corners]}{\end{tcolorbox}}\fi
+
+\renewcommand*\contentsname{Table of contents}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\hypertarget{motivation}{%
+\section{Motivation}\label{motivation}}
+
+\begin{itemize}
+\tightlist
+\item
+  We want to estimate the monetary value of recreation as an ecosystem
+  service.
+\item
+  We would like to do this credibly at a global scale to produce a
+  country-year panel.
+\item
+  This is a subcomponent of the larger GEP value for each nation and
+  likely a sizeable value.
+\end{itemize}
+
+\hypertarget{components-of-recreation-gep}{%
+\section{Components of Recreation
+GEP}\label{components-of-recreation-gep}}
+
+\begin{itemize}
+\tightlist
+\item
+  Nature-based recreation can be sub-divided by the type of recreation
+  (park, camping, beach, lake activites, eco-tourism, etc.).
+\item
+  The key distinction for nature-based recreation is that these are
+  activities where the main attraction (or attribute deriving utility)
+  comers from nature.
+\item
+  For our purposes, we can start by narrowing our examination to camping
+  or hiking recreation in protected areas. But in general, we can modify
+  the following approach to consider a wider definition of nature-based
+  recreation.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Consider what are the \(i \in I\) that we wish to estimate and what
+    we can't estimate.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{previous-estimates-of-recreation-value}{%
+\section{Previous Estimates of Recreation
+Value}\label{previous-estimates-of-recreation-value}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  SEEA Accounts (Vallecilloa et al.~2019, Ecological Modelling)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ESTIMAP-Recreation (EU Only)
+  \item
+    17\% of land suitable for daily recreation
+  \item
+    500 million inhabitants (62\% close to suitable land)
+  \item
+    Value: EUR 50 Billion
+  \end{itemize}
+\item
+  GEP of Ecotourism in Qinghai (Ougang et al., 2020)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Contingent Valuation survey data of travel expenditures (P, Q) for
+    `eco-tourism'
+  \item
+    They conduct the questionnaire at 3 parks of Qinghai and get the
+    following key information
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Visits Staying Time (days)
+    \item
+      Travel Expenditure (X \$/person)
+    \item
+      Salary of Visitor (Y \$/person/days)
+    \item
+      Where does the visitor come from (Zone Z)
+    \end{itemize}
+  \item
+    Based on this information, they can get for all the zones they are
+    interested in. And they get for each zone Z, what is the
+    frequency/probability that people will visits 3 parks in Qinghai.
+  \item
+    Then they reweight by zones for all respondents' visiting rates and
+    zonal population and sum up all costs (Travel Expenditure and Time
+    expenditure) to equal to the GEP of ecotourism.
+  \item
+    462 respondents; 2 parks, 1 lake
+  \item
+    Value: Yuan 3 Billion in 2000, Yuan 21.6 Billion in 2015
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{gep-formula}{%
+\section{GEP Formula}\label{gep-formula}}
+
+Deterministics (accounting) formula:
+
+\begin{itemize}
+\tightlist
+\item
+  Panel of monetary value over year \(t\) and country \(c\) over the set
+  of recreation activities \(I\)
+\item
+  Requires aggreagtion to value by year and country to be consistent
+  with system of national accounts (SNA) as presented with SEEA
+  accounts.
+\end{itemize}
+
+\[
+GEP_{c,t} = \lambda \cdot ( \sum_{i \in I} P_{i,c,t} \cdot Q_{i,c,t})
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(\lambda\): Nature's contribution
+\item
+  \(P\): Price \(\to\) Travel cost for park visitors
+\item
+  \(Q\): Quantity \(\to\) Number of park visitors
+\end{itemize}
+
+While \(\lambda\) may vary over time and space, there is a theoretical
+and empirical decision to assert it is constant. Empirically, difficult
+to measure a change over time. Theoretically, if the value of recreation
+comes from contributions of land, labor, and capital -- is the relative
+contribution of land compared to labor and capital changing
+(meaningfully) over time? Does it vary over country (componsition of the
+country)? Probably linked to structural transformation (development of a
+country).
+
+\hypertarget{estimating-recreation-gep}{%
+\section{Estimating Recreation GEP}\label{estimating-recreation-gep}}
+
+\hypertarget{method-1-extrapolation-from-gdp-measures}{%
+\subsection{Method 1: Extrapolation from GDP
+Measures}\label{method-1-extrapolation-from-gdp-measures}}
+
+\hypertarget{general-model}{%
+\subsubsection{General Model}\label{general-model}}
+
+\[
+GEP_{c,y} = \lambda \cdot \theta \times X_{c,y} \times Z_{c,y}
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(X\): Share of GDP from tourism
+\item
+  \(Z\): Annutal GDP
+\item
+  \(\lambda\): Nature's contribution adjustment
+\item
+  \(\theta\): \% of tourism that is nature based
+\end{itemize}
+
+\hypertarget{data-requirements}{%
+\subsubsection{Data Requirements}\label{data-requirements}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Share GDP from tourism related to nature
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://www.trade.gov/travel-and-tourism-satellite-account-ttsa-program}{Tourism
+    Satellite Accounts (TSA)} for scenic and sight seeing travel cost
+  \item
+    \href{https://www.bea.gov/data/special-topics/outdoor-recreation}{BEA}
+  \item
+    \href{https://recreationroundtable.org/resources/national-recreation-data/}{ORR}
+  \end{itemize}
+\item
+  National GDP measures
+
+  \begin{itemize}
+  \tightlist
+  \item
+    From the world bank
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{calibration}{%
+\subsubsection{Calibration}\label{calibration}}
+
+\begin{itemize}
+\tightlist
+\item
+  Test if this aligns with SEEA measures or UNWTO measures
+\end{itemize}
+
+\hypertarget{method-2-outdoor-recreation-extrapolation}{%
+\subsection{Method 2: Outdoor Recreation
+Extrapolation}\label{method-2-outdoor-recreation-extrapolation}}
+
+\begin{itemize}
+\tightlist
+\item
+  USA-ITA breaks down to GDP based on the recreation activities for both
+  national level and state level
+\item
+  This data not available for the other countries (can extrapolate to
+  other countries at global level) H- owever, it is hard to tease out
+  the labor portion for calculating GDP\_recreation.
+\end{itemize}
+
+What we calculate now is an upper bound assuming
+
+\[
+GEP_{rec} \le GDP_{rec}
+\]
+
+\hypertarget{general-model-1}{%
+\subsubsection{General Model}\label{general-model-1}}
+
+Estimate the relationship (elasticity) between GDP recreation and size
+of the recreation areas. Then if we know the recreation area size we can
+use this as a proxy for GEP and translate this into monetary value
+through GDP. The logic is that larger recreation areas will generate
+more GDP.
+
+Run the following state level regression
+
+\[
+GDP_{s,y} = \alpha + \beta X_{s,y} + \varepsilon
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(GDP\): State \(s\) by year \(y\) recreational GDP
+\item
+  \(X\): \% of recreational area divided by total size of the state
+\item
+  \(\beta\): elasticity between size of recreation area and GDP
+  recreation share
+\end{itemize}
+
+With this estimate we can use the \(\beta\) to determine GEP for other
+nations using the same approach
+
+\[
+GEP_{c,y} = \lambda \times (\beta \cdot X_{c,y})
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(X\): \% of protected area divided by total size of the country
+\item
+  \(\lambda\): Nature's contribution adjustment
+\end{itemize}
+
+A big limitation of this is that we are assuming that the relationship
+of GDP to GEP for recreation in the US is representative of other
+countries -- especially those in lower income brackets. This is unlikely
+to be true.
+
+\hypertarget{data-requirement}{%
+\subsubsection{Data Requirement}\label{data-requirement}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Use USA Outdoor Recreation GDP at state level
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Conventional recreation, boating/fishing, RVing, Snow activities
+  \end{itemize}
+\item
+  Measure accessibility to state parks
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://www.nature.com/articles/s41597-022-01857-7}{PAD-US-AR}
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{method-3-balmford-et-al.-2015-measure}{%
+\subsection{Method 3: Balmford et al.~2015
+Measure}\label{method-3-balmford-et-al.-2015-measure}}
+
+\hypertarget{estiamting-quantity-q}{%
+\subsubsection{\texorpdfstring{Estiamting Quantity
+\(Q\)}{Estiamting Quantity Q}}\label{estiamting-quantity-q}}
+
+For each country \(c\), we can use the number of estimated visits
+annually for each protected area using the
+\href{https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002074}{Balmford
+et al.~2015} measure (\textasciitilde{} 8 Billion visits annually).
+
+\[
+Q_{c} = \sum_{i \in I} Visits_{ic}
+\]
+
+The main issue with this quantity it is likely can over-estimate of
+visitations. It models predictions of visitation by:
+
+\begin{itemize}
+\tightlist
+\item
+  PA size
+\item
+  Local population size within 100KM of PA
+\item
+  Remoteness by travel time of city of \textgreater50,000 using global
+  friction surface
+\item
+  Natural attractiveness using a 1-5 rating scale by 3 conservation
+  scientists
+\item
+  National income
+\end{itemize}
+
+In their materials, they use a generalized linear model but (1) do not
+show the estimation equation and (2) do not show validation of the model
+or out of sample prediction.
+
+\hypertarget{estimating-price-p}{%
+\subsubsection{\texorpdfstring{Estimating Price
+\(P\)}{Estimating Price P}}\label{estimating-price-p}}
+
+Try to estimate the average expenditure for a recreation visit by
+dividing the GDP per capita attributable to recreation by the number of
+park visitors annually. You could measure the expenditure on recreation
+through
+\href{https://ourworldindata.org/grapher/tourism-gdp-proportion-of-total-gdp?time=2022}{UNWTO
+share of GDP} or as
+\href{https://data.worldbank.org/indicator/ST.INT.RCPT.CD?end=2020\&start=1995}{international
+tourism reciept} (a bit more broadly defined).
+
+Two issue:
+
+\begin{itemize}
+\tightlist
+\item
+  GDP measure will be for all recreation (includes tourism, etc.). So
+  this will over-value the price
+\item
+  It is difficult to find data on only nature-based recreation GDP
+\end{itemize}
+
+\[
+P_c = \frac{GDP_{pc} from Rec_j}{Q_c}
+\]
+
+\hypertarget{method-4-ryans-imagination}{%
+\subsection{Method 4: Ryan's
+Imagination}\label{method-4-ryans-imagination}}
+
+\hypertarget{estimating-quantity-q}{%
+\subsubsection{\texorpdfstring{Estimating Quantity
+\(Q\)}{Estimating Quantity Q}}\label{estimating-quantity-q}}
+
+\begin{itemize}
+\tightlist
+\item
+  Main issue: We do not observe park vistors in systematic way across
+  global and across time.
+\end{itemize}
+
+Inspired by the
+\href{https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002074}{Balmford
+et al., 2015} method. Ideally improved. What I am aiming to do is
+measure a propensity to visit using attributes of the park that are
+attractive and the distance of the park. Then multiplying this
+probability to visit by the known population from the origin to obtain
+the number of visitors a park gets each year.
+
+Start with the
+\href{https://sedac.ciesin.columbia.edu/data/collection/gpw-v4}{gridded
+population data}. The idea is to estimate a likelihood function to
+determine the probability that a representive agent in any grid cell
+will visit each park. We can estimate this primarly using distance to
+parks. In this setting, we assume that likelihood to visit is primarly
+determined by distance. But we add in other attributes that make a park
+attractive (just as is done in Balmford).
+
+The measure of distance can be determined by:
+
+\begin{itemize}
+\tightlist
+\item
+  Euclidean distance using raster algebra
+\item
+  Travel time calculated by Open Street Maps
+\end{itemize}
+
+We can place this framework within a gravity model.
+
+\[
+V_{ij} = G \frac{M_i^{\beta_1}M_j^{\beta_2}}{D_{ij}exp(Border)} \cdot \eta
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(G\): Base rate of gravity. In our context this is the base rate of
+  visitiation between grid cell \(i\) and park \(j\). This would be the
+  frictionless rate of visitation (perfectly accessible park)
+\item
+  \(M_i\) and \(M_j\): These are the attration properties of grid cell
+  \(i\) to park \(j\). For grid cells, this may be that they are
+  urban/rural, income, or other attributes that make them have increased
+  desire to visit a park. For parks, this could be attributes about the
+  park like features, scenic value, size of the park, designation as
+  national, state or local.
+\item
+  \(D\): the distance between grid cell \(i\) and park \(j\)
+\item
+  \(Border\): This is dummy variable that applifies the fricition to
+  distance if the visitor has to cross a national border (administrative
+  or logistical fricitions)
+\item
+  \(\eta\): A multipilicative error term for all other attributes that
+  pull the bodies together and push the apart. Otherwise, this is a
+  deterministic model.
+\end{itemize}
+
+We can log-linearize this model:
+
+\[
+log(V_{ij}) = \beta_0 log(G) + \beta_1 log(M_i) + \beta_2 log(M_j) + \beta_3 log(D_{ij}) + \beta_4 Border + \eta
+\]
+
+We will need to match this model to real data. So to take this to the
+data we will likely want to use a Poisson Pseudo Maximum Likelihood
+(PPML) method that accounts for heteroskedastic errors (Silva and
+Tenreyro, 2006). We will need some data on the number of visits from
+\(i\) to \(j\). So this is some park level information on annual visits
+generally from across the world. This is difficult to do for all parks
+globally. But suppose you can do it for some subset of parks that are
+representative of all parks (externally valid). Then you can estimate
+the above model and use the \(\beta\) coefficents as a calibration
+method to extrapolate the number of visitations \(V\) for each park
+given attributes that are known globally about \(M_i\) and \(M_j\) and
+our estimated distance between the two locations.
+
+At the end of this exercise, we will have the number of estimated visits
+from each park to each grid cell. This allows us to generate:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The total number of visitations to each park.
+\item
+  The total visitations from each grid cell.
+\end{enumerate}
+
+Ideally, we can validate our results for each with some aggregated data
+on park vistations from tourism and park services for parks and from
+cities. This should add to the credibility of our estimates for the
+quantity of visitors.
+
+In the end, for GEP we will just need to aggregate up the number of
+visits by \emph{parks} to get the \(Q\) in the forumla for each country.
+We should use park value (rather than grid values) because that is where
+the ecosystem service is being derived from. So we don't actually care
+where the visitor comes from. What we care about is where they go. That
+is where the production value is being produced (and quinsendentally
+consumed as this is a non-tradeable good).
+
+A Suggestion by Steve: Do a zonal calculation. Only consider people
+within a certian proximity of each park rather than the whole world.
+This relies on the assumption that after a certain buffer, travel to a
+PA is prohibitive (either in expense or legally).
+
+\hypertarget{estimating-price-p-1}{%
+\subsubsection{\texorpdfstring{Estimating Price
+\(P\)}{Estimating Price P}}\label{estimating-price-p-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  Main issues: (1) We do not observe prices for park visitors, and (2)
+  most recreation areas are often free access or subsidized so we have a
+  non-market good to consider.
+\end{itemize}
+
+The underlying principle to estimate the price for recreation is to
+measure a Willingness to Pay (WTP) through revealed preference of travel
+cost. The underlying assumption in this setting is that the primary
+determinate of visiting a park is distance. So the further the distance,
+the more valuable the park must be to the visitor. Note that this can be
+confirmed from the gravity model in the previous section using
+\(\beta_3\). This should be the largest coefficient relative to
+observable attributes in \(M_i\) and \(M_j\). If it is not, then
+distance is not the main driver of revealed preferences.
+
+A nice attribute of travel cost is that we can associate this cost to
+known costs of travel in monetary terms. So, persume (naively) that
+everyone drives or flies to get to their destination. Then we can use
+gasoline prices as a measure of cost and multiply that by the distance
+traveled. You can imagine how this could be refined. In this way, we
+avoid the infeasible necessity to use a survey method for visitors to
+report costs. This can be a way to validate our cost measures if there
+are parks/studies with this information. Such an exercise would be
+designed to change the travel costs to better reflected survey reports
+to total cost. So you could imagine the following simple regression to
+go beyond a basic gas prices \(\times\) distance measure.
+
+\[
+C_{ij} = \alpha_0 + \alpha_1 G_{i} \times D_{ij} + \alpha_2 X_{i} + \varepsilon 
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(C\): Cost paid by visitor \(i\) to go to \(j\)
+\item
+  \(G\): Gas prices paid by visitor \(i\)
+\item
+  \(D\): Distance for visitor \(i\) to \(j\)
+\item
+  \(X\): Any other costs that are reported
+\end{itemize}
+
+From this regression, what can use from the subset of survey data is
+determine the influence of gas and distance \(\alpha_1\) relative to the
+importance of all other costs \(\alpha_2\). We can also confirm in this
+way that gas costs from distance is the main travel cost. We know the
+distance and gas globally, but not the other information. So we can try
+to measure the porportional importance of other costs to total cost. Say
+something as simple as \(\frac{D}{C}\) as a probability weight for
+portion of cost attributable to distance. Flip this an we can re-weight
+all of our travel costs with an inverse probability weight. Namely,
+\(w = \frac{1}{\frac{D}{C}} = \frac{C}{D}\).
+
+From here forward I am laying out the groundwork for backing out the WTP
+measure in monetary terms. In case it gets lost in my explanation, the
+core aspect we care about is likelihood to visit determined by
+importance of income net of travel costs. This should give us the price
+for any given park as determined by distance.
+
+Let us start with a discrete choice model. In this model, visitor \(n\)
+is selecting which park \(j\) they would like to visit. In any time
+\(t\) they can only select one park \(j\) from the set of parks \(J\).
+We observe ex-post where a person has choosen to visit. So we will
+develop a behavioral model to describe why they made that choice using
+observable attributes about the individual visitor and the selection of
+parks avaliable to them.
+
+Let us start with a random utility model (REM). The visitor has observed
+attributes \(s_n\). We will say that these are heterogenous preferences
+across the population. So if we observe differences in income or being a
+foreign national we can distinguish visitation by differences in tastes.
+The visitory selects over alternative parks \(j\) which have observable
+attributes \(x_{nj} \forall j \in J\). These are things like scenic
+quality, size of the park, amenities, travel cost to get there, etc.
+Each visitor recieves some representative utlity for each park they
+\emph{could} visit:
+
+\[
+V_{nj} = V(x_{nj}, s_n) = \beta'_n x_{nj} \forall j
+\]
+
+\(\beta'_n\) allows for variation in taste and this is described by an
+i.i.d. extreme value distribution \(\beta_n \sim f_n(\beta|\Theta)\).
+The \(\beta\) captures the \(s_n\) attributes varying across vistors.
+This is their difference in assigning importance (perference) over
+different attributes of the park \(x\). This is non-deterministic as
+there is utility from attributes we don't observe. So this is an
+indirect utility function. It is a component of the following overall
+direct utility function:
+
+\[
+U_{nj} =  V_{nj} + \varepsilon_{nj}
+\]
+
+Let us assume that the unobserved attributes as a random vector
+logistically distributed by \(f(\varepsilon)\). The probability that
+visitor \(n\) visits park \(i\) is
+
+\[
+P_{ni} = \int \mathbf{1}[\varepsilon_{nj} - \varepsilon_{ni} <  V_{ni} -  V_{nj}] f(\varepsilon) d \varepsilon
+\]
+
+This simply states that the probability of vistor \(n\) selecting park
+\(i\) to visit is the value obtained from observed attributes is greater
+in \(i\) than in all other parks \(j\) and that this value is greater
+than the unobserved value for park \(j\) over park \(i\). Note also that
+this is a CDF.
+
+We assume that \(\varepsilon\) is i.i.d. from the extreme value
+distribution such that:
+
+\[
+CDF: F(\varepsilon_{nj}) = 1 - e^{-e^{\varepsilon_{nj}}}
+\]
+
+Then the realized difference that the random error value for \(j\) is
+greater than \(i\) becomes:
+
+\[
+\begin{align}
+\varepsilon^*_{nji} = & \varepsilon_{nj} - \varepsilon_{ni} \\ 
+F(\varepsilon^*_{nji}) = & \frac{e^{\varepsilon^*_{nji}}}{1 + \varepsilon^*_{nji}} 
+\end{align}
+\]
+
+From here we get the probability of visitor \(n\) visiting park \(i\)
+where \(V_{nj} = \beta'_n x_{nj}\) as:
+
+\[
+P_{ni} = \int \left( \frac{e^{\beta'_n x_{ni}}}{\sum_j e^{ \beta'_n x_{nj}}} \right) f_n(\beta|\Theta) d(\beta)
+\]
+
+Because we are allowing for taste variation in the population, the above
+proability does not have a closed form solution (because we do not know
+the solution to the mixing of several logistical distributions -- one
+\(\varepsilon\) distribution for each \(\beta\)). But we can give the
+probability distrubition some normal form:
+\(f_n(\beta|\Theta) = f(\beta|\mu, \sigma)\). And an advantage here is
+that we have relaxed the Irrelevance of Independent Alternatives (IIA)
+assumption - we have correlations between unobserved factors of
+alternatives.
+
+We will construct a simulated mixed logit proability through
+bootstrapping and then place this within a simulated log-likelihood
+estimator. For the simulated mixed logit, we will do the following
+steps:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Draw at \(\beta^r\) for draw \(r\) from \(f_n(\beta|\Theta)\). This is
+  an observed attribute for visitor \(n \in N\).
+\item
+  Calculate the logit formula for \(P_ni(B^r)\). This is the probability
+  the visit park \(i\) given we observe this attribute about the visitor
+  and all the attributes about the park \(x_j \forall j \in J\).
+\end{enumerate}
+
+\[
+P_ni(B^r) = \frac{e^{B^r x_{ni}}}{\sum_j e^{B^r x_{nj}}}
+\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Re-draw and estimate 1 and 2 \(R\) times
+\item
+  Average the results to get simulated probability
+\end{enumerate}
+
+\[
+\hat{P_{ni}} = \frac{1}{R} \sum_{r=1}^R P_ni(B^r)
+\]
+
+Now we can place it in the simulated log-likelihood estimator. Set
+\(y_{ni} = 1\) when the visitor chooses park \(i\). We select the
+\(\Theta\) that matches \((\mu, \sigma)\) to the observed data using
+general method of moments. This is the estimator:
+
+\[
+SSL = \sum_{n=1}^N \sum_{j=1}^J y_{nj} log(\hat{P_{ni}})
+\]
+
+In our context, to back out the monetary value of travel cost we need
+the following indirect utility function that we can vary over time
+\(t\):
+
+\[
+V_{njt} = \beta_1 (y_n - c_{njt}) + \varepsilon_{njt}
+\]
+
+\(\beta_1\) is the WTP price we are after for visitor \(n\) to park
+\(j\) in time \(t\). In our case, is the likelihood that a visitor from
+grid cell \(n\). We can add in other attributes we think are correlated
+with \(\beta_1\) that may bias it. But in practice, all we need to know
+is average income \(y\) and some measure of travel cost \(c\).
+
+\hypertarget{adjusting-for-natures-contribution-lambda}{%
+\subsubsection{\texorpdfstring{Adjusting for Nature's Contribution
+\(\lambda\)}{Adjusting for Nature's Contribution \textbackslash lambda}}\label{adjusting-for-natures-contribution-lambda}}
+
+Two potential Methods:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Something out of GTAP or CWON (both by Justin).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    From cobb-douglas production function, \(1 - \alpha - \beta\).
+  \end{itemize}
+\item
+  Try a hedonic model for land prices
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Value of park land with no development must be the value of nature
+  \item
+    Nothing else can contribute to the value of land in protected area
+  \item
+    Would need to make this a multiplier effect (so portion of the
+    hedonic value attributable to land)
+  \item
+    Issue: Because it is protected land, we do not see land purchases
+    very often. In fact, most valuable land is likely always a protected
+    area.
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{data-requirements-1}{%
+\subsubsection{Data Requirements}\label{data-requirements-1}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  World Protected Areas Database
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Shapefiles for location and size of existing protected areas and
+    when they open (allows for dyanmic component)
+  \end{itemize}
+\item
+  InVEST Scenic Quality Model
+
+  \begin{itemize}
+  \tightlist
+  \item
+    https://naturalcapitalproject.stanford.edu/invest/scenic-quality
+  \item
+    Determine avg (or max) attractiveness of each park
+  \item
+    Need info on viewpoints, visibility of view points (DEM), and weight
+    for value of each view point (relative value)
+  \end{itemize}
+\item
+  Gridded Population Data
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \# of people in each grid cell and where they live.
+  \end{itemize}
+\item
+  Incomes at sub-national level
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Assign as the average income (budget constraint) for people in given
+    grid cells
+  \end{itemize}
+\item
+  Open Street Map
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Average travel distance and time from grid cells to parks
+  \end{itemize}
+\item
+  Park Visititation Data
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Natual Park Service, etc.
+  \item
+    Visitation of rates to calibrate visitation model off of.
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{analysis}{%
+\subsubsection{Analysis}\label{analysis}}
+
+\hypertarget{cleaning}{%
+\paragraph{Cleaning}\label{cleaning}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Clean raw datasets
+\item
+  Merge attributes of parks with park level info
+\item
+  Merge population gridded data with attributes about consumers (income)
+\end{enumerate}
+
+\hypertarget{estimate-grid-cell-components}{%
+\paragraph{Estimate Grid Cell
+Components}\label{estimate-grid-cell-components}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Estimate distance from gridded cells to parks (Euclidean distance, or
+  OSM distance)
+\item
+  Estimate propensity for visits by grid cells
+\item
+  Calibrate propensity for visits = quantity of visitors per park
+\item
+  Estimate WTP for visitors in each grid cell to each park
+\item
+  Back out price using WTP, income, and travel cost = price for visitors
+  for park-grid cell pairs
+\end{enumerate}
+
+\hypertarget{estimate-gep}{%
+\paragraph{Estimate GEP}\label{estimate-gep}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Multiply grid cell price-to-park with grid cell visitor-to-park
+  \(\times\) nature's contribution adjustment = GEP value to visit all
+  parks from that grid cell
+\item
+  Aggregate grid cell value for a nation in a year = \(GEP_{i,t}\) =
+  Export panel data
+\end{enumerate}
+
+\hypertarget{output}{%
+\section{Output}\label{output}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  A panel data set of GEP values for country and year we can hand to
+  Justin \& Steve
+\item
+  Map showing the gridded population overlayed on protected areas
+  (Method)
+\item
+  Map (or table) showing grid cell values for total visitor count and
+  average WTP (Origin)
+\item
+  Map (or table) showing parks total visitor count and average WTP
+  (Destination)
+\item
+  Time series of GEP value
+\item
+  Some comparision (ground truth table) of recreation GEP value to GDP
+  value (World bank measure)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    https://www.unwto.org/tourism-statistics/economic-contribution-SDG
+  \item
+    https://wdi.worldbank.org/table/6.14
+  \item
+    https://data.worldbank.org/indicator/ST.INT.RCPT.CD
+  \item
+    https://data.oecd.org/industry/tourism-gdp.htm
+  \end{itemize}
+\end{enumerate}
+
+
+
+\end{document}
