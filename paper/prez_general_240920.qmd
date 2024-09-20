@@ -17,7 +17,11 @@ author:
       - ref: umn
 date: 09/20/2024
 date-format: long
-format: revealjs
+format:
+  html:
+    toc: true
+    html-math-method: katex
+    css: styles.css
 ---
 
 
@@ -31,60 +35,369 @@ format: revealjs
 
 - Nature-based recreation can be sub-divided by the type of recreation (park, camping, beach, lake activites, eco-tourism, etc.). 
 - The key distinction for nature-based recreation is that these are activities where the main attraction (or attribute deriving utility) comers from nature. 
-- For our purposes, we can start by narrowing our examination to camping or hiking recreation in protected areas. But in general, we can modify the following approach to consider a wider definition of nature-based recreation.
+- For our purposes, we can start by narrowing our examination to camping or hiking recreation in protected areas. But in general, we can modify the following approach to consider a wider definition of nature-based recreation. 
+    - Consider what are the $i \in I$ that we wish to estimate and what we can't estimate.
 
 # Previous Estimates of Recreation Value
 
-- 
+<!-- 1. One big model, or splinter into the many components. (InVest Model) 
+    - https://academic-oup-com.ezp2.lib.umn.edu/book/26318/chapter/194597515
+    - Problem with InVEST model is it requires Flickr data (Commercial API Now Required) -->
+
+1. SEEA Accounts (Vallecilloa et al. 2019, Ecological Modelling)
+    - ESTIMAP-Recreation (EU Only)
+    - 17% of land suitable for daily recreation
+    - 500 million inhabitants (62% close to suitable land)
+    - Value: EUR 50 Billion
+
+2. GEP of Ecotourism in Qinghai (Ougang et al.,  2020)
+    - Contingent Valuation survey data of travel expenditures (P, Q) for 'eco-tourism'
+    - They conduct the questionnaire at 3 parks of Qinghai and get the following key information
+        - Visits Staying Time (days)
+        - Travel Expenditure (X $/person)
+        - Salary of Visitor (Y $/person/days)
+        - Where does the visitor come from (Zone Z)
+    - Based on this information, they can get for all the zones they are interested in. And they get for each zone Z, what is the frequency/probability that people will visits 3 parks in Qinghai.
+    - Then they reweight by zones for all respondents’ visiting rates and zonal population and sum up all costs (Travel Expenditure and Time expenditure) to equal to the GEP of ecotourism. 
+    - 462 respondents; 2 parks, 1 lake 
+    - Value: Yuan 3 Billion in 2000, Yuan 21.6 Billion in 2015
+
 
 # GEP Formula
 
 Deterministics (accounting) formula:
-Panel of monetary value over year $t$ and country $c$
-Requires aggreagtion to value by year and country to be consistent with system of national accounts (SNA) as presented with SEEA accounts. 
+
+- Panel of monetary value over year $t$ and country $c$ over the set of recreation activities $I$
+- Requires aggreagtion to value by year and country to be consistent with system of national accounts (SNA) as presented with SEEA accounts. 
 
 $$
-GEP_{i,t} = \lambda \cdot (P_{i,t} \cdot Q_{i,t})
+GEP_{c,t} = \lambda \cdot ( \sum_{i \in I} P_{i,c,t} \cdot Q_{i,c,t})
 $$
 
 - $\lambda$: Nature's contribution
-- $P$: Price
-- $Q$: Quantity
+- $P$: Price $\to$ Travel cost for park visitors
+- $Q$: Quantity $\to$ Number of park visitors
 
 While $\lambda$ may vary over time and space, there is a theoretical and empirical decision to assert it is constant. Empirically, difficult to measure a change over time. Theoretically, if the value of recreation comes from contributions of land, labor, and capital -- is the relative contribution of land compared to labor and capital changing (meaningfully) over time? Does it vary over country (componsition of the country)? Probably linked to structural transformation (development of a country).
 
+# Estimating Recreation GEP
 
-# Estimating Quantity $Q$
+## Method 1: Extrapolation from GDP Measures 
 
-- Main issue: Not observing park vistors in systematic way across global and across time.
+### General Model 
 
-Propensity to Visit: likelihood function using attributes of the park that are attractive and the distance of the park to determine the number of visitors are park gets each year
-- Calibrate the likelihood function with recorded measures of the number of vistors to a park (bonus if we know where they came from)
-- Using info on population size for each grid cell, we can then determine the number of people visiting from from grid cell and total vistattion to each park.
+$$
+GEP_{c,y} = \lambda \cdot \theta \times X_{c,y} \times Z_{c,y}
+$$
 
-# Estimating Price $P$
+- $X$: Share of GDP from tourism
+- $Z$: Annutal GDP
+- $\lambda$: Nature's contribution adjustment 
+- $\theta$: % of tourism that is nature based
 
-- Main issue: (1) do not observe prices (2) most recreation is often free access or subsidized
+### Data Requirements
 
-Willingness to Pay (WTP) through revealed preference of travel cost
-- Need to use multinominal logit model on attributes of the park (particularly distance to park)
-- f(e) is logisitic
-- V(x,s) = travel cost (determined by distance and cost of gasoline) s.t. to incomes (proxy by average income for a gridded cell)
-- g(B) = variation over distribution of heterogenous taste/attribute of visitors: domestics/international, urban/rural, income
+1. Share GDP from tourism related to nature
+    - [Tourism Satellite Accounts (TSA)](https://www.trade.gov/travel-and-tourism-satellite-account-ttsa-program) for scenic and sight seeing travel cost
+    - [BEA](https://www.bea.gov/data/special-topics/outdoor-recreation)
+    - [ORR](https://recreationroundtable.org/resources/national-recreation-data/)
+2. National GDP measures
+    - From the world bank
 
-# Estimating Nature's Contribution $\lambda$
+### Calibration 
 
-- Something out of gtap. Alternatively, we can try to use a hedonic model on prices.
+- Test if this aligns with SEEA measures or UNWTO measures
 
-# Data Requirements
+## Method 2: Outdoor Recreation Extrapolation 
 
-- World Protected Areas Database
+- USA-ITA breaks down to GDP based on the recreation activities for both national level and state level
+- This data not available for the other countries (can extrapolate to other countries at global level)
+H- owever, it is hard to tease out the labor portion for calculating GDP_recreation. 
+
+What we calculate now is an upper bound assuming
+
+$$
+GEP_{rec} \le GDP_{rec}
+$$
+
+### General Model 
+
+Estimate the relationship (elasticity) between GDP recreation and size of the recreation areas. Then if we know the recreation area size we can use this as a proxy for GEP and translate this into monetary value through GDP. The logic is that larger recreation areas will generate more GDP. 
+
+Run the following state level regression 
+
+$$
+GDP_{s,y} = \alpha + \beta X_{s,y} + \varepsilon
+$$
+
+- $GDP$: State $s$ by year $y$ recreational GDP
+- $X$: % of recreational area divided by total size of the state
+- $\beta$: elasticity between size of recreation area and GDP recreation share 
+
+With this estimate we can use the $\beta$ to determine GEP for other nations using the same approach 
+
+$$
+GEP_{c,y} = \lambda \times (\beta \cdot X_{c,y})
+$$
+
+- $X$: % of protected area divided by total size of the country
+- $\lambda$: Nature's contribution adjustment 
+
+A big limitation of this is that we are assuming that the relationship of GDP to GEP for recreation in the US is representative of other countries -- especially those in lower income brackets. This is unlikely to be true. 
+
+
+### Data Requirement
+
+1. Use USA Outdoor Recreation GDP at state level
+    - Conventional recreation, boating/fishing, RVing, Snow activities
+2. Measure accessibility to state parks
+    - [PAD-US-AR](https://www.nature.com/articles/s41597-022-01857-7)
+
+
+## Method 3: Balmford et al. 2015 Measure
+
+### Estiamting Quantity $Q$
+
+For each country $c$, we can use the number of estimated visits annually for each protected area using the [Balmford et al. 2015](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002074) measure (~ 8 Billion visits annually). 
+
+
+$$
+Q_{c} = \sum_{i \in I} Visits_{ic}
+$$
+
+The main issue with this quantity it is likely can over-estimate of visitations. It models predictions of visitation by: 
+
+- PA size
+- Local population size within 100KM of PA
+- Remoteness by travel time of city of >50,000 using global friction surface
+- Natural attractiveness using a 1-5 rating scale by 3 conservation scientists
+- National income
+
+In their materials, they use a generalized linear model but (1) do not show the estimation equation and (2) do not show validation of the model or out of sample prediction.
+
+### Estimating Price $P$
+
+Try to estimate the average expenditure for a recreation visit by dividing the GDP per capita attributable to recreation by the number of park visitors annually. You could measure the expenditure on recreation through [UNWTO share of GDP](https://ourworldindata.org/grapher/tourism-gdp-proportion-of-total-gdp?time=2022) or as [international tourism reciept](https://data.worldbank.org/indicator/ST.INT.RCPT.CD?end=2020&start=1995) (a bit more broadly defined).
+
+Two issue: 
+
+- GDP measure will be for all recreation (includes tourism, etc.). So this will over-value the price
+- It is difficult to find data on only nature-based recreation GDP
+
+$$
+P_c = \frac{GDP_{pc} from Rec_j}{Q_c}
+$$
+
+## Method 4: Ryan's Imagination
+
+### Estimating Quantity $Q$
+
+- Main issue: We do not observe park vistors in systematic way across global and across time.
+
+Inspired by the [Balmford et al., 2015](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002074) method. Ideally improved. What I am aiming to do is measure a propensity to visit using attributes of the park that are attractive and the distance of the park. Then multiplying this probability to visit by the known population from the origin to obtain the number of visitors a park gets each year.
+
+Start with the [gridded population data](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4). The idea is to estimate a likelihood function to determine the probability that a representive agent in any grid cell will visit each park. We can estimate this primarly using distance to parks. In this setting, we assume that likelihood to visit is primarly determined by distance. But we add in other attributes that make a park attractive (just as is done in Balmford). 
+
+The measure of distance can be determined by: 
+
+- Euclidean distance using raster algebra
+- Travel time calculated by Open Street Maps
+
+
+We can place this framework within a gravity model. 
+
+$$
+V_{ij} = G \frac{M_i^{\beta_1}M_j^{\beta_2}}{D_{ij}exp(Border)} \cdot \eta
+$$
+
+- $G$: Base rate of gravity. In our context this is the base rate of visitiation between grid cell $i$ and park $j$. This would be the frictionless rate of visitation (perfectly accessible park)
+- $M_i$ and $M_j$: These are the attration properties of grid cell $i$ to park $j$. For grid cells, this may be that they are urban/rural, income, or other attributes that make them have increased desire to visit a park. For parks, this could be attributes about the park like features, scenic value, size of the park, designation as national, state or local. 
+- $D$: the distance between grid cell $i$ and park $j$
+- $Border$: This is dummy variable that applifies the fricition to distance if the visitor has to cross a national border (administrative or logistical fricitions)
+- $\eta$: A multipilicative error term for all other attributes that pull the bodies together and push the apart. Otherwise, this is a deterministic model. 
+
+We can log-linearize this model: 
+
+$$
+log(V_{ij}) = \beta_0 log(G) + \beta_1 log(M_i) + \beta_2 log(M_j) + \beta_3 log(D_{ij}) + \beta_4 Border + \eta
+$$
+
+We will need to match this model to real data. So to take this to the data we will likely want to use a Poisson Pseudo Maximum Likelihood (PPML) method that accounts for heteroskedastic errors (Silva and Tenreyro, 2006). We will need some data on the number of visits from $i$ to $j$. So this is some park level information on annual visits generally from across the world. This is difficult to do for all parks globally. But suppose you can do it for some subset of parks that are representative of all parks (externally valid). Then you can estimate the above model and use the $\beta$ coefficents as a calibration method to extrapolate the number of visitations $V$ for each park given attributes that are known globally about $M_i$ and $M_j$ and our estimated distance between the two locations. 
+
+At the end of this exercise, we will have the number of estimated visits from each park to each grid cell. This allows us to generate: 
+
+1. The total number of visitations to each park. 
+2. The total visitations from each grid cell. 
+
+Ideally, we can validate our results for each with some aggregated data on park vistations from tourism and park services for parks and from cities. This should add to the credibility of our estimates for the quantity of visitors. 
+
+In the end, for GEP we will just need to aggregate up the number of visits by *parks* to get the $Q$ in the forumla for each country. We should use park value (rather than grid values) because that is where the ecosystem service is being derived from. So we don't actually care where the visitor comes from. What we care about is where they go. That is where the production value is being produced (and quinsendentally consumed as this is a non-tradeable good).  
+
+
+A Suggestion by Steve: Do a zonal calculation. Only consider people within a certian proximity of each park rather than the whole world. This relies on the assumption that after a certain buffer, travel to a PA is prohibitive (either in expense or legally).
+
+
+### Estimating Price $P$
+
+- Main issues: (1) We do not observe prices for park visitors, and (2) most recreation areas are often free access or subsidized so we have a non-market good to consider.
+
+The underlying principle to estimate the price for recreation is to measure a Willingness to Pay (WTP) through revealed preference of travel cost. The underlying assumption in this setting is that the primary determinate of visiting a park is distance. So the further the distance, the more valuable the park must be to the visitor. Note that this can be confirmed from the gravity model in the previous section using $\beta_3$. This should be the largest coefficient relative to observable attributes in $M_i$ and $M_j$. If it is not, then distance is not the main driver of revealed preferences. 
+
+A nice attribute of travel cost is that we can associate this cost to known costs of travel in monetary terms. So, persume (naively) that everyone drives or flies to get to their destination. Then we can use gasoline prices as a measure of cost and multiply that by the distance traveled. You can imagine how this could be refined. In this way, we avoid the infeasible necessity to use a survey method for visitors to report costs. This can be a way to validate our cost measures if there are parks/studies with this information. Such an exercise would be designed to change the travel costs to better reflected survey reports to total cost. So you could imagine the following simple regression to go beyond a basic gas prices $\times$ distance measure. 
+
+$$
+C_{ij} = \alpha_0 + \alpha_1 G_{i} \times D_{ij} + \alpha_2 X_{i} + \varepsilon 
+$$
+
+- $C$: Cost paid by visitor $i$ to go to $j$
+- $G$: Gas prices paid by visitor $i$
+- $D$: Distance for visitor $i$ to $j$
+- $X$: Any other costs that are reported
+
+From this regression, what can use from the subset of survey data is determine the influence of gas and distance $\alpha_1$ relative to the importance of all other costs $\alpha_2$. We can also confirm in this way that gas costs from distance is the main travel cost. We know the distance and gas globally, but not the other information. So we can try to measure the porportional importance of other costs to total cost. Say something as simple as $\frac{D}{C}$ as a probability weight for portion of cost attributable to distance. Flip this an we can re-weight all of our travel costs with an inverse probability weight. Namely, $w = \frac{1}{\frac{D}{C}} = \frac{C}{D}$. 
+
+
+From here forward I am laying out the groundwork for backing out the WTP measure in monetary terms. In case it gets lost in my explanation, the core aspect we care about is likelihood to visit determined by importance of income net of travel costs. This should give us the price for any given park as determined by distance. 
+
+Let us start with a discrete choice model. In this model, visitor $n$ is selecting which park $j$ they would like to visit. In any time $t$ they can only select one park $j$ from the set of parks $J$. We observe ex-post where a person has choosen to visit. So we will develop a behavioral model to describe why they made that choice using observable attributes about the individual visitor and the selection of parks avaliable to them. 
+
+Let us start with a random utility model (REM). The visitor has observed attributes $s_n$. We will say that these are heterogenous preferences across the population. So if we observe differences in income or being a foreign national we can distinguish visitation by differences in tastes. The visitory selects over alternative parks $j$ which have observable attributes $x_{nj} \forall j \in J$. These are things like scenic quality, size of the park, amenities, travel cost to get there, etc. Each visitor recieves some representative utlity for each park they *could* visit: 
+
+$$
+V_{nj} = V(x_{nj}, s_n) = \beta'_n x_{nj} \forall j
+$$
+
+$\beta'_n$ allows for variation in taste and this is described by an i.i.d. extreme value distribution $\beta_n \sim f_n(\beta|\Theta)$. The $\beta$ captures the $s_n$ attributes varying across vistors. This is their difference in assigning importance (perference) over different attributes of the park $x$. This is non-deterministic as there is utility from attributes we don't observe. So this is an indirect utility function. It is a component of the following overall direct utility function: 
+
+$$
+U_{nj} =  V_{nj} + \varepsilon_{nj}
+$$
+
+
+Let us assume that the unobserved attributes as a random vector logistically distributed by $f(\varepsilon)$. The probability that visitor $n$ visits park $i$ is 
+
+$$
+P_{ni} = \int \mathbf{1}[\varepsilon_{nj} - \varepsilon_{ni} <  V_{ni} -  V_{nj}] f(\varepsilon) d \varepsilon
+$$
+
+This simply states that the probability of vistor $n$ selecting park $i$ to visit is the value obtained from observed attributes is greater in $i$ than in all other parks $j$ and that this value is greater than the unobserved value for park $j$ over park $i$. Note also that this is a CDF. 
+
+We assume that $\varepsilon$ is i.i.d. from the extreme value distribution such that: 
+
+$$
+CDF: F(\varepsilon_{nj}) = 1 - e^{-e^{\varepsilon_{nj}}}
+$$
+
+Then the realized difference that the random error value for $j$ is greater than $i$ becomes: 
+
+$$
+\begin{align}
+\varepsilon^*_{nji} = & \varepsilon_{nj} - \varepsilon_{ni} \\ 
+F(\varepsilon^*_{nji}) = & \frac{e^{\varepsilon^*_{nji}}}{1 + \varepsilon^*_{nji}} 
+\end{align}
+$$
+
+From here we get the probability of visitor $n$ visiting park $i$ where $V_{nj} = \beta'_n x_{nj}$ as:
+
+$$
+P_{ni} = \int \left( \frac{e^{\beta'_n x_{ni}}}{\sum_j e^{ \beta'_n x_{nj}}} \right) f_n(\beta|\Theta) d(\beta)
+$$
+
+
+Because we are allowing for taste variation in the population, the above proability does not have a closed form solution (because we do not know the solution to the mixing of several logistical distributions -- one $\varepsilon$ distribution for each $\beta$). But we can give the probability distrubition some normal form: $f_n(\beta|\Theta) = f(\beta|\mu, \sigma)$. And an advantage here is that we have relaxed the Irrelevance of Independent Alternatives (IIA) assumption - we have correlations between unobserved factors of alternatives.
+
+We will construct a simulated mixed logit proability through bootstrapping and then place this within a simulated log-likelihood estimator. For the simulated mixed logit, we will do the following steps: 
+
+1. Draw at $\beta^r$ for draw $r$ from $f_n(\beta|\Theta)$. This is an observed attribute for visitor $n \in N$.
+2. Calculate the logit formula for $P_ni(B^r)$. This is the probability the visit park $i$ given we observe this attribute about the visitor and all the attributes about the park $x_j \forall j \in J$. 
+
+$$
+P_ni(B^r) = \frac{e^{B^r x_{ni}}}{\sum_j e^{B^r x_{nj}}}
+$$
+
+3. Re-draw and estimate 1 and 2 $R$ times
+4. Average the results to get simulated probability
+
+$$
+\hat{P_{ni}} = \frac{1}{R} \sum_{r=1}^R P_ni(B^r)
+$$
+
+
+Now we can place it in the simulated log-likelihood estimator. Set $y_{ni} = 1$ when the visitor chooses park $i$. We select the $\Theta$ that matches $(\mu, \sigma)$ to the observed data using general method of moments. This is the estimator: 
+
+$$
+SSL = \sum_{n=1}^N \sum_{j=1}^J y_{nj} log(\hat{P_{ni}})
+$$
+
+In our context, to back out the monetary value of travel cost we need the following indirect utility function that we can vary over time $t$:
+
+$$
+V_{njt} = \beta_1 (y_n - c_{njt}) + \varepsilon_{njt}
+$$
+
+$\beta_1$ is the WTP price we are after for visitor $n$ to park $j$ in time $t$. In our case, is the likelihood that a visitor from grid cell $n$. We can add in other attributes we think are correlated with $\beta_1$ that may bias it. But in practice, all we need to know is average income $y$ and some measure of travel cost $c$. 
+
+
+### Adjusting for Nature's Contribution $\lambda$
+
+Two potential Methods:
+
+1. Something out of GTAP or CWON (both by Justin).
+    - From cobb-douglas production function, $1 - \alpha - \beta$.
+
+2. Try a hedonic model for land prices
+    - Value of park land with no development must be the value of nature
+    - Nothing else can contribute to the value of land in protected area
+    - Would need to make this a multiplier effect (so portion of the hedonic value attributable to land)
+    - Issue: Because it is protected land, we do not see land purchases very often. In fact, most valuable land is likely always a protected area.
+
+### Data Requirements
+
+1. World Protected Areas Database
     - Shapefiles for location and size of existing protected areas and when they open (allows for dyanmic component)
-- InVEST Scenic Quality Model
+2. InVEST Scenic Quality Model
     - https://naturalcapitalproject.stanford.edu/invest/scenic-quality
     - Determine avg (or max) attractiveness of each park 
     - Need info on viewpoints, visibility of view points (DEM), and weight for value of each view point (relative value)
-- Gridded Population Data
+3. Gridded Population Data
     - \# of people in each grid cell and where they live. 
-- Incomes at sub-national level
+4. Incomes at sub-national level
     - Assign as the average income (budget constraint) for people in given grid cells
+5. Open Street Map
+    - Average travel distance and time from grid cells to parks
+6. Park Visititation Data
+    - Natual Park Service, etc.
+    - Visitation of rates to calibrate visitation model off of.
+
+### Analysis
+#### Cleaning
+
+1. Clean raw datasets
+2. Merge attributes of parks with park level info
+3. Merge population gridded data with attributes about consumers (income)
+
+#### Estimate Grid Cell Components
+
+4. Estimate distance from gridded cells to parks (Euclidean distance, or OSM distance)
+5. Estimate propensity for visits by grid cells
+6. Calibrate propensity for visits = quantity of visitors per park
+7. Estimate WTP for visitors in each grid cell to each park
+8. Back out price using WTP, income, and travel cost = price for visitors for park-grid cell pairs
+
+#### Estimate GEP
+
+1.  Multiply grid cell price-to-park with grid cell visitor-to-park $\times$ nature's contribution adjustment  = GEP value to visit all parks from that grid cell
+2.  Aggregate grid cell value for a nation in a year = $GEP_{i,t}$ = Export panel data
+
+# Output
+
+1. A panel data set of GEP values for country and year we can hand to Justin & Steve
+2. Map showing the gridded population overlayed on protected areas (Method)
+3. Map (or table) showing grid cell values for total visitor count and average WTP (Origin)
+4. Map (or table) showing parks total visitor count and average WTP (Destination)
+5. Time series of GEP value
+6. Some comparision (ground truth table) of recreation GEP value to GDP value (World bank measure)
+    - https://www.unwto.org/tourism-statistics/economic-contribution-SDG
+    - https://wdi.worldbank.org/table/6.14
+    - https://data.worldbank.org/indicator/ST.INT.RCPT.CD
+    - https://data.oecd.org/industry/tourism-gdp.htm

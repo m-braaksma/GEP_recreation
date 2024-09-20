@@ -1,423 +1,482 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Matthew Braaksma">
+<meta name="author" content="Lifeng Ren">
+<meta name="author" content="Spencer Wood">
+<meta name="author" content="Ryan McWay">
+<meta name="dcterms.date" content="2024-09-20">
+
+<title>Ecosystem Service of Recreation for GEP</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
 <script src="prez_general_240920_files/libs/clipboard/clipboard.min.js"></script>
-<script src="prez_general_240920_files/libs/quarto-html/tabby.min.js"></script>
+<script src="prez_general_240920_files/libs/quarto-html/quarto.js"></script>
 <script src="prez_general_240920_files/libs/quarto-html/popper.min.js"></script>
 <script src="prez_general_240920_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="prez_general_240920_files/libs/quarto-html/anchor.min.js"></script>
 <link href="prez_general_240920_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="prez_general_240920_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="prez_general_240920_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="prez_general_240920_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.433">
+<link href="prez_general_240920_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="prez_general_240920_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="prez_general_240920_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="prez_general_240920_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
-  <meta name="author" content="Matthew Braaksma">
-  <meta name="author" content="Lifeng Ren">
-  <meta name="author" content="Spencer Wood">
-  <meta name="author" content="Ryan McWay">
-  <meta name="dcterms.date" content="2024-09-20">
-  <title>Ecosystem Service of Recreation for GEP</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="prez_general_240920_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="prez_general_240920_files/libs/revealjs/dist/reveal.css">
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-      vertical-align: middle;
-    }
-  </style>
-  <link rel="stylesheet" href="prez_general_240920_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="prez_general_240920_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="prez_general_240920_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="prez_general_240920_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="prez_general_240920_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
-  .callout {
-    margin-top: 1em;
-    margin-bottom: 1em;  
-    border-radius: .25rem;
-  }
-
-  .callout.callout-style-simple { 
-    padding: 0em 0.5em;
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-    display: flex;
-  }
-
-  .callout.callout-style-default {
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-  }
-
-  .callout .callout-body-container {
-    flex-grow: 1;
-  }
-
-  .callout.callout-style-simple .callout-body {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-style-default .callout-body {
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-titled.callout-style-simple .callout-body {
-    margin-top: 0.2em;
-  }
-
-  .callout:not(.callout-titled) .callout-body {
-      display: flex;
-  }
-
-  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
-    padding-left: 1.6em;
-  }
-
-  .callout.callout-titled .callout-header {
-    padding-top: 0.2em;
-    margin-bottom: -0.2em;
-  }
-
-  .callout.callout-titled .callout-title  p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-    
-  .callout.callout-titled.callout-style-simple .callout-content  p {
-    margin-top: 0;
-  }
-
-  .callout.callout-titled.callout-style-default .callout-content  p {
-    margin-top: 0.7em;
-  }
-
-  .callout.callout-style-simple div.callout-title {
-    border-bottom: none;
-    font-size: .9rem;
-    font-weight: 600;
-    opacity: 75%;
-  }
-
-  .callout.callout-style-default  div.callout-title {
-    border-bottom: none;
-    font-weight: 600;
-    opacity: 85%;
-    font-size: 0.9rem;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-default div.callout-content {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-simple .callout-icon::before {
-    height: 1rem;
-    width: 1rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-  }
-
-  .callout.callout-style-default .callout-icon::before {
-    height: 0.9rem;
-    width: 0.9rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 0.9rem 0.9rem;
-  }
-
-  .callout-title {
-    display: flex
-  }
-    
-  .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  .callout.no-icon::before {
-    display: none !important;
-  }
-
-  .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
-  }
-
-  .callout.callout-titled .callout-icon::before {
-    margin-top: .5rem;
-    padding-right: .5rem;
-  }
-
-  .callout:not(.callout-titled) .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  /* Callout Types */
-
-  div.callout-note {
-    border-left-color: #4582ec !important;
-  }
-
-  div.callout-note .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
-  }
-
-  div.callout-note.callout-style-default .callout-title {
-    background-color: #dae6fb
-  }
-
-  div.callout-important {
-    border-left-color: #d9534f !important;
-  }
-
-  div.callout-important .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-important.callout-style-default .callout-title {
-    background-color: #f7dddc
-  }
-
-  div.callout-warning {
-    border-left-color: #f0ad4e !important;
-  }
-
-  div.callout-warning .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-warning.callout-style-default .callout-title {
-    background-color: #fcefdc
-  }
-
-  div.callout-tip {
-    border-left-color: #02b875 !important;
-  }
-
-  div.callout-tip .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-tip.callout-style-default .callout-title {
-    background-color: #ccf1e3
-  }
-
-  div.callout-caution {
-    border-left-color: #fd7e14 !important;
-  }
-
-  div.callout-caution .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
-  }
-
-  div.callout-caution.callout-style-default .callout-title {
-    background-color: #ffe5d0
-  }
-
-  </style>
-  <style type="text/css">
-    .reveal div.sourceCode {
-      margin: 0;
-      overflow: auto;
-    }
-    .reveal div.hanging-indent {
-      margin-left: 1em;
-      text-indent: -1em;
-    }
-    .reveal .slide:not(.center) {
-      height: 100%;
-    }
-    .reveal .slide.scrollable {
-      overflow-y: auto;
-    }
-    .reveal .footnotes {
-      height: 100%;
-      overflow-y: auto;
-    }
-    .reveal .slide .absolute {
-      position: absolute;
-      display: block;
-    }
-    .reveal .footnotes ol {
-      counter-reset: ol;
-      list-style-type: none; 
-      margin-left: 0;
-    }
-    .reveal .footnotes ol li:before {
-      counter-increment: ol;
-      content: counter(ol) ". "; 
-    }
-    .reveal .footnotes ol li > p:first-child {
-      display: inline-block;
-    }
-    .reveal .slide ul,
-    .reveal .slide ol {
-      margin-bottom: 0.5em;
-    }
-    .reveal .slide ul li,
-    .reveal .slide ol li {
-      margin-top: 0.4em;
-      margin-bottom: 0.2em;
-    }
-    .reveal .slide ul[role="tablist"] li {
-      margin-bottom: 0;
-    }
-    .reveal .slide ul li > *:first-child,
-    .reveal .slide ol li > *:first-child {
-      margin-block-start: 0;
-    }
-    .reveal .slide ul li > *:last-child,
-    .reveal .slide ol li > *:last-child {
-      margin-block-end: 0;
-    }
-    .reveal .slide .columns:nth-child(3) {
-      margin-block-start: 0.8em;
-    }
-    .reveal blockquote {
-      box-shadow: none;
-    }
-    .reveal .tippy-content>* {
-      margin-top: 0.2em;
-      margin-bottom: 0.7em;
-    }
-    .reveal .tippy-content>*:last-child {
-      margin-bottom: 0.2em;
-    }
-    .reveal .slide > img.stretch.quarto-figure-center,
-    .reveal .slide > img.r-stretch.quarto-figure-center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto; 
-    }
-    .reveal .slide > img.stretch.quarto-figure-left,
-    .reveal .slide > img.r-stretch.quarto-figure-left  {
-      display: block;
-      margin-left: 0;
-      margin-right: auto; 
-    }
-    .reveal .slide > img.stretch.quarto-figure-right,
-    .reveal .slide > img.r-stretch.quarto-figure-right  {
-      display: block;
-      margin-left: auto;
-      margin-right: 0; 
-    }
-  </style>
+<link rel="stylesheet" href="styles.css">
 </head>
-<body class="quarto-light">
-  <div class="reveal">
-    <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Ecosystem Service of Recreation for GEP</h1>
+<body>
 
-<div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Matthew Braaksma 
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation">Motivation</a></li>
+  <li><a href="#components-of-recreation-gep" id="toc-components-of-recreation-gep" class="nav-link" data-scroll-target="#components-of-recreation-gep">Components of Recreation GEP</a></li>
+  <li><a href="#previous-estimates-of-recreation-value" id="toc-previous-estimates-of-recreation-value" class="nav-link" data-scroll-target="#previous-estimates-of-recreation-value">Previous Estimates of Recreation Value</a></li>
+  <li><a href="#gep-formula" id="toc-gep-formula" class="nav-link" data-scroll-target="#gep-formula">GEP Formula</a></li>
+  <li><a href="#estimating-recreation-gep" id="toc-estimating-recreation-gep" class="nav-link" data-scroll-target="#estimating-recreation-gep">Estimating Recreation GEP</a>
+  <ul class="collapse">
+  <li><a href="#method-1-extrapolation-from-gdp-measures" id="toc-method-1-extrapolation-from-gdp-measures" class="nav-link" data-scroll-target="#method-1-extrapolation-from-gdp-measures">Method 1: Extrapolation from GDP Measures</a>
+  <ul class="collapse">
+  <li><a href="#general-model" id="toc-general-model" class="nav-link" data-scroll-target="#general-model">General Model</a></li>
+  <li><a href="#data-requirements" id="toc-data-requirements" class="nav-link" data-scroll-target="#data-requirements">Data Requirements</a></li>
+  <li><a href="#calibration" id="toc-calibration" class="nav-link" data-scroll-target="#calibration">Calibration</a></li>
+  </ul></li>
+  <li><a href="#method-2-outdoor-recreation-extrapolation" id="toc-method-2-outdoor-recreation-extrapolation" class="nav-link" data-scroll-target="#method-2-outdoor-recreation-extrapolation">Method 2: Outdoor Recreation Extrapolation</a>
+  <ul class="collapse">
+  <li><a href="#general-model-1" id="toc-general-model-1" class="nav-link" data-scroll-target="#general-model-1">General Model</a></li>
+  <li><a href="#data-requirement" id="toc-data-requirement" class="nav-link" data-scroll-target="#data-requirement">Data Requirement</a></li>
+  </ul></li>
+  <li><a href="#method-3-balmford-et-al.-2015-measure" id="toc-method-3-balmford-et-al.-2015-measure" class="nav-link" data-scroll-target="#method-3-balmford-et-al.-2015-measure">Method 3: Balmford et al.&nbsp;2015 Measure</a>
+  <ul class="collapse">
+  <li><a href="#estiamting-quantity-q" id="toc-estiamting-quantity-q" class="nav-link" data-scroll-target="#estiamting-quantity-q">Estiamting Quantity <span class="math inline">Q</span></a></li>
+  <li><a href="#estimating-price-p" id="toc-estimating-price-p" class="nav-link" data-scroll-target="#estimating-price-p">Estimating Price <span class="math inline">P</span></a></li>
+  </ul></li>
+  <li><a href="#method-4-ryans-imagination" id="toc-method-4-ryans-imagination" class="nav-link" data-scroll-target="#method-4-ryans-imagination">Method 4: Ryan’s Imagination</a>
+  <ul class="collapse">
+  <li><a href="#estimating-quantity-q" id="toc-estimating-quantity-q" class="nav-link" data-scroll-target="#estimating-quantity-q">Estimating Quantity <span class="math inline">Q</span></a></li>
+  <li><a href="#estimating-price-p-1" id="toc-estimating-price-p-1" class="nav-link" data-scroll-target="#estimating-price-p-1">Estimating Price <span class="math inline">P</span></a></li>
+  <li><a href="#adjusting-for-natures-contribution-lambda" id="toc-adjusting-for-natures-contribution-lambda" class="nav-link" data-scroll-target="#adjusting-for-natures-contribution-lambda">Adjusting for Nature’s Contribution <span class="math inline">\lambda</span></a></li>
+  <li><a href="#data-requirements-1" id="toc-data-requirements-1" class="nav-link" data-scroll-target="#data-requirements-1">Data Requirements</a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output">Output</a></li>
+  </ul>
+</nav>
 </div>
-        <p class="quarto-title-affiliation">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Ecosystem Service of Recreation for GEP</h1>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Matthew Braaksma </p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
             University of Minnesota
           </p>
-    </div>
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Lifeng Ren 
-</div>
-        <p class="quarto-title-affiliation">
+      </div>
+      <div class="quarto-title-meta-contents">
+    <p class="author">Lifeng Ren </p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
             University of Minnesota
           </p>
-    </div>
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Spencer Wood 
-</div>
-        <p class="quarto-title-affiliation">
+      </div>
+      <div class="quarto-title-meta-contents">
+    <p class="author">Spencer Wood </p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
             University of Washington
           </p>
-    </div>
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Ryan McWay 
-</div>
-        <p class="quarto-title-affiliation">
+      </div>
+      <div class="quarto-title-meta-contents">
+    <p class="author">Ryan McWay </p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
             University of Minnesota
           </p>
+      </div>
     </div>
-</div>
 
-  <p class="date">September 20, 2024</p>
-</section>
-<section id="motivation" class="title-slide slide level1 center">
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 20, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="motivation" class="level1">
 <h1>Motivation</h1>
-
+<ul>
+<li>We want to estimate the monetary value of recreation as an ecosystem service.</li>
+<li>We would like to do this credibly at a global scale to produce a country-year panel.</li>
+<li>This is a subcomponent of the larger GEP value for each nation and likely a sizeable value.</li>
+</ul>
 </section>
-
-<section id="components-of-recreation-gep" class="title-slide slide level1 center">
+<section id="components-of-recreation-gep" class="level1">
 <h1>Components of Recreation GEP</h1>
-
+<ul>
+<li>Nature-based recreation can be sub-divided by the type of recreation (park, camping, beach, lake activites, eco-tourism, etc.).</li>
+<li>The key distinction for nature-based recreation is that these are activities where the main attraction (or attribute deriving utility) comers from nature.</li>
+<li>For our purposes, we can start by narrowing our examination to camping or hiking recreation in protected areas. But in general, we can modify the following approach to consider a wider definition of nature-based recreation.
+<ul>
+<li>Consider what are the <span class="math inline">i \in I</span> that we wish to estimate and what we can’t estimate.</li>
+</ul></li>
+</ul>
 </section>
-
-<section id="previous-estimates-of-recreation-value" class="title-slide slide level1 center">
+<section id="previous-estimates-of-recreation-value" class="level1">
 <h1>Previous Estimates of Recreation Value</h1>
-
+<!-- 1. One big model, or splinter into the many components. (InVest Model) 
+    - https://academic-oup-com.ezp2.lib.umn.edu/book/26318/chapter/194597515
+    - Problem with InVEST model is it requires Flickr data (Commercial API Now Required) -->
+<ol type="1">
+<li>SEEA Accounts (Vallecilloa et al.&nbsp;2019, Ecological Modelling)
+<ul>
+<li>ESTIMAP-Recreation (EU Only)</li>
+<li>17% of land suitable for daily recreation</li>
+<li>500 million inhabitants (62% close to suitable land)</li>
+<li>Value: EUR 50 Billion</li>
+</ul></li>
+<li>GEP of Ecotourism in Qinghai (Ougang et al., 2020)
+<ul>
+<li>Contingent Valuation survey data of travel expenditures (P, Q) for ‘eco-tourism’</li>
+<li>They conduct the questionnaire at 3 parks of Qinghai and get the following key information
+<ul>
+<li>Visits Staying Time (days)</li>
+<li>Travel Expenditure (X $/person)</li>
+<li>Salary of Visitor (Y $/person/days)</li>
+<li>Where does the visitor come from (Zone Z)</li>
+</ul></li>
+<li>Based on this information, they can get for all the zones they are interested in. And they get for each zone Z, what is the frequency/probability that people will visits 3 parks in Qinghai.</li>
+<li>Then they reweight by zones for all respondents’ visiting rates and zonal population and sum up all costs (Travel Expenditure and Time expenditure) to equal to the GEP of ecotourism.</li>
+<li>462 respondents; 2 parks, 1 lake</li>
+<li>Value: Yuan 3 Billion in 2000, Yuan 21.6 Billion in 2015</li>
+</ul></li>
+</ol>
 </section>
-
-<section id="gep-formula" class="title-slide slide level1 center">
+<section id="gep-formula" class="level1">
 <h1>GEP Formula</h1>
-<p>Deterministics (accounting) formula: Panel of monetary value over year <span class="math inline">\(t\)</span> and country <span class="math inline">\(c\)</span> Requires aggreagtion to value by year and country to be consistent with system of national accounts (SNA) as presented with SEEA accounts.</p>
-<p><span class="math display">\[
-GEP_{i,t} = \lambda \cdot (P_{i,t} \cdot Q_{i,t})
-\]</span></p>
-<p>While <span class="math inline">\(\lambda\)</span> may vary over time and space, there is a theoretical and empirical decision to assert it is constant. Empirically, difficult to measure a change over time. Theoretically, if the value of recreation comes from contributions of land, labor, and capital – is the relative contribution of land compared to labor and capital changing (meaningfully) over time? Does it vary over country (componsition of the country)? Probably linked to structural transformation (development of a country).</p>
-</section>
-
-<section id="estimating-quantity-q" class="title-slide slide level1 center">
-<h1>Estimating Quantity <span class="math inline">\(Q\)</span></h1>
+<p>Deterministics (accounting) formula:</p>
 <ul>
-<li>Main issue: Not observing park vistors in systematic way across global and across time.</li>
+<li>Panel of monetary value over year <span class="math inline">t</span> and country <span class="math inline">c</span> over the set of recreation activities <span class="math inline">I</span></li>
+<li>Requires aggreagtion to value by year and country to be consistent with system of national accounts (SNA) as presented with SEEA accounts.</li>
 </ul>
-<p>Propensity to Visit: likelihood function using attributes of the park that are attractive and the distance of the park to determine the number of visitors are park gets each year - Calibrate the likelihood function with recorded measures of the number of vistors to a park (bonus if we know where they came from) - Using info on population size for each grid cell, we can then determine the number of people visiting from from grid cell and total vistattion to each park.</p>
-</section>
-
-<section id="estimating-price-p" class="title-slide slide level1 center">
-<h1>Estimating Price <span class="math inline">\(P\)</span></h1>
+<p><span class="math display">
+GEP_{c,t} = \lambda \cdot ( \sum_{i \in I} P_{i,c,t} \cdot Q_{i,c,t})
+</span></p>
 <ul>
-<li>Main issue: (1) do not observe prices (2) most recreation is often free access or subsidized</li>
+<li><span class="math inline">\lambda</span>: Nature’s contribution</li>
+<li><span class="math inline">P</span>: Price <span class="math inline">\to</span> Travel cost for park visitors</li>
+<li><span class="math inline">Q</span>: Quantity <span class="math inline">\to</span> Number of park visitors</li>
 </ul>
-<p>Willingness to Pay (WTP) through revealed preference of travel cost - Need to use multinominal logit model on attributes of the park (particularly distance to park) - f(e) is logisitic - V(x,s) = travel cost (determined by distance and cost of gasoline) s.t. to incomes (proxy by average income for a gridded cell) - g(B) = variation over distribution of heterogenous taste/attribute of visitors: domestics/international, urban/rural, income</p>
+<p>While <span class="math inline">\lambda</span> may vary over time and space, there is a theoretical and empirical decision to assert it is constant. Empirically, difficult to measure a change over time. Theoretically, if the value of recreation comes from contributions of land, labor, and capital – is the relative contribution of land compared to labor and capital changing (meaningfully) over time? Does it vary over country (componsition of the country)? Probably linked to structural transformation (development of a country).</p>
 </section>
-
-<section id="estimating-natures-contribution-lambda" class="title-slide slide level1 center">
-<h1>Estimating Nature’s Contribution <span class="math inline">\(\lambda\)</span></h1>
+<section id="estimating-recreation-gep" class="level1">
+<h1>Estimating Recreation GEP</h1>
+<section id="method-1-extrapolation-from-gdp-measures" class="level2">
+<h2 class="anchored" data-anchor-id="method-1-extrapolation-from-gdp-measures">Method 1: Extrapolation from GDP Measures</h2>
+<section id="general-model" class="level3">
+<h3 class="anchored" data-anchor-id="general-model">General Model</h3>
+<p><span class="math display">
+GEP_{c,y} = \lambda \cdot \theta \times X_{c,y} \times Z_{c,y}
+</span></p>
 <ul>
-<li>Something out of gtap. Alternatively, we can try to use a hedonic model on prices.</li>
+<li><span class="math inline">X</span>: Share of GDP from tourism</li>
+<li><span class="math inline">Z</span>: Annutal GDP</li>
+<li><span class="math inline">\lambda</span>: Nature’s contribution adjustment</li>
+<li><span class="math inline">\theta</span>: % of tourism that is nature based</li>
 </ul>
 </section>
-
-<section id="data-requirements" class="title-slide slide level1 center">
-<h1>Data Requirements</h1>
+<section id="data-requirements" class="level3">
+<h3 class="anchored" data-anchor-id="data-requirements">Data Requirements</h3>
+<ol type="1">
+<li>Share GDP from tourism related to nature
 <ul>
+<li><a href="https://www.trade.gov/travel-and-tourism-satellite-account-ttsa-program">Tourism Satellite Accounts (TSA)</a> for scenic and sight seeing travel cost</li>
+<li><a href="https://www.bea.gov/data/special-topics/outdoor-recreation">BEA</a></li>
+<li><a href="https://recreationroundtable.org/resources/national-recreation-data/">ORR</a></li>
+</ul></li>
+<li>National GDP measures
+<ul>
+<li>From the world bank</li>
+</ul></li>
+</ol>
+</section>
+<section id="calibration" class="level3">
+<h3 class="anchored" data-anchor-id="calibration">Calibration</h3>
+<ul>
+<li>Test if this aligns with SEEA measures or UNWTO measures</li>
+</ul>
+</section>
+</section>
+<section id="method-2-outdoor-recreation-extrapolation" class="level2">
+<h2 class="anchored" data-anchor-id="method-2-outdoor-recreation-extrapolation">Method 2: Outdoor Recreation Extrapolation</h2>
+<ul>
+<li>USA-ITA breaks down to GDP based on the recreation activities for both national level and state level</li>
+<li>This data not available for the other countries (can extrapolate to other countries at global level) H- owever, it is hard to tease out the labor portion for calculating GDP_recreation.</li>
+</ul>
+<p>What we calculate now is an upper bound assuming</p>
+<p><span class="math display">
+GEP_{rec} \le GDP_{rec}
+</span></p>
+<section id="general-model-1" class="level3">
+<h3 class="anchored" data-anchor-id="general-model-1">General Model</h3>
+<p>Estimate the relationship (elasticity) between GDP recreation and size of the recreation areas. Then if we know the recreation area size we can use this as a proxy for GEP and translate this into monetary value through GDP. The logic is that larger recreation areas will generate more GDP.</p>
+<p>Run the following state level regression</p>
+<p><span class="math display">
+GDP_{s,y} = \alpha + \beta X_{s,y} + \varepsilon
+</span></p>
+<ul>
+<li><span class="math inline">GDP</span>: State <span class="math inline">s</span> by year <span class="math inline">y</span> recreational GDP</li>
+<li><span class="math inline">X</span>: % of recreational area divided by total size of the state</li>
+<li><span class="math inline">\beta</span>: elasticity between size of recreation area and GDP recreation share</li>
+</ul>
+<p>With this estimate we can use the <span class="math inline">\beta</span> to determine GEP for other nations using the same approach</p>
+<p><span class="math display">
+GEP_{c,y} = \lambda \times (\beta \cdot X_{c,y})
+</span></p>
+<ul>
+<li><span class="math inline">X</span>: % of protected area divided by total size of the country</li>
+<li><span class="math inline">\lambda</span>: Nature’s contribution adjustment</li>
+</ul>
+<p>A big limitation of this is that we are assuming that the relationship of GDP to GEP for recreation in the US is representative of other countries – especially those in lower income brackets. This is unlikely to be true.</p>
+</section>
+<section id="data-requirement" class="level3">
+<h3 class="anchored" data-anchor-id="data-requirement">Data Requirement</h3>
+<ol type="1">
+<li>Use USA Outdoor Recreation GDP at state level
+<ul>
+<li>Conventional recreation, boating/fishing, RVing, Snow activities</li>
+</ul></li>
+<li>Measure accessibility to state parks
+<ul>
+<li><a href="https://www.nature.com/articles/s41597-022-01857-7">PAD-US-AR</a></li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="method-3-balmford-et-al.-2015-measure" class="level2">
+<h2 class="anchored" data-anchor-id="method-3-balmford-et-al.-2015-measure">Method 3: Balmford et al.&nbsp;2015 Measure</h2>
+<section id="estiamting-quantity-q" class="level3">
+<h3 class="anchored" data-anchor-id="estiamting-quantity-q">Estiamting Quantity <span class="math inline">Q</span></h3>
+<p>For each country <span class="math inline">c</span>, we can use the number of estimated visits annually for each protected area using the <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002074">Balmford et al.&nbsp;2015</a> measure (~ 8 Billion visits annually).</p>
+<p><span class="math display">
+Q_{c} = \sum_{i \in I} Visits_{ic}
+</span></p>
+<p>The main issue with this quantity it is likely can over-estimate of visitations. It models predictions of visitation by:</p>
+<ul>
+<li>PA size</li>
+<li>Local population size within 100KM of PA</li>
+<li>Remoteness by travel time of city of &gt;50,000 using global friction surface</li>
+<li>Natural attractiveness using a 1-5 rating scale by 3 conservation scientists</li>
+<li>National income</li>
+</ul>
+<p>In their materials, they use a generalized linear model but (1) do not show the estimation equation and (2) do not show validation of the model or out of sample prediction.</p>
+</section>
+<section id="estimating-price-p" class="level3">
+<h3 class="anchored" data-anchor-id="estimating-price-p">Estimating Price <span class="math inline">P</span></h3>
+<p>Try to estimate the average expenditure for a recreation visit by dividing the GDP per capita attributable to recreation by the number of park visitors annually. You could measure the expenditure on recreation through <a href="https://ourworldindata.org/grapher/tourism-gdp-proportion-of-total-gdp?time=2022">UNWTO share of GDP</a> or as <a href="https://data.worldbank.org/indicator/ST.INT.RCPT.CD?end=2020&amp;start=1995">international tourism reciept</a> (a bit more broadly defined).</p>
+<p>Two issue:</p>
+<ul>
+<li>GDP measure will be for all recreation (includes tourism, etc.). So this will over-value the price</li>
+<li>It is difficult to find data on only nature-based recreation GDP</li>
+</ul>
+<p><span class="math display">
+P_c = \frac{GDP_{pc} from Rec_j}{Q_c}
+</span></p>
+</section>
+</section>
+<section id="method-4-ryans-imagination" class="level2">
+<h2 class="anchored" data-anchor-id="method-4-ryans-imagination">Method 4: Ryan’s Imagination</h2>
+<section id="estimating-quantity-q" class="level3">
+<h3 class="anchored" data-anchor-id="estimating-quantity-q">Estimating Quantity <span class="math inline">Q</span></h3>
+<ul>
+<li>Main issue: We do not observe park vistors in systematic way across global and across time.</li>
+</ul>
+<p>Inspired by the <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002074">Balmford et al., 2015</a> method. Ideally improved. What I am aiming to do is measure a propensity to visit using attributes of the park that are attractive and the distance of the park. Then multiplying this probability to visit by the known population from the origin to obtain the number of visitors a park gets each year.</p>
+<p>Start with the <a href="https://sedac.ciesin.columbia.edu/data/collection/gpw-v4">gridded population data</a>. The idea is to estimate a likelihood function to determine the probability that a representive agent in any grid cell will visit each park. We can estimate this primarly using distance to parks. In this setting, we assume that likelihood to visit is primarly determined by distance. But we add in other attributes that make a park attractive (just as is done in Balmford).</p>
+<p>The measure of distance can be determined by:</p>
+<ul>
+<li>Euclidean distance using raster algebra</li>
+<li>Travel time calculated by Open Street Maps</li>
+</ul>
+<p>We can place this framework within a gravity model.</p>
+<p><span class="math display">
+V_{ij} = G \frac{M_i^{\beta_1}M_j^{\beta_2}}{D_{ij}exp(Border)} \cdot \eta
+</span></p>
+<ul>
+<li><span class="math inline">G</span>: Base rate of gravity. In our context this is the base rate of visitiation between grid cell <span class="math inline">i</span> and park <span class="math inline">j</span>. This would be the frictionless rate of visitation (perfectly accessible park)</li>
+<li><span class="math inline">M_i</span> and <span class="math inline">M_j</span>: These are the attration properties of grid cell <span class="math inline">i</span> to park <span class="math inline">j</span>. For grid cells, this may be that they are urban/rural, income, or other attributes that make them have increased desire to visit a park. For parks, this could be attributes about the park like features, scenic value, size of the park, designation as national, state or local.</li>
+<li><span class="math inline">D</span>: the distance between grid cell <span class="math inline">i</span> and park <span class="math inline">j</span></li>
+<li><span class="math inline">Border</span>: This is dummy variable that applifies the fricition to distance if the visitor has to cross a national border (administrative or logistical fricitions)</li>
+<li><span class="math inline">\eta</span>: A multipilicative error term for all other attributes that pull the bodies together and push the apart. Otherwise, this is a deterministic model.</li>
+</ul>
+<p>We can log-linearize this model:</p>
+<p><span class="math display">
+log(V_{ij}) = \beta_0 log(G) + \beta_1 log(M_i) + \beta_2 log(M_j) + \beta_3 log(D_{ij}) + \beta_4 Border + \eta
+</span></p>
+<p>We will need to match this model to real data. So to take this to the data we will likely want to use a Poisson Pseudo Maximum Likelihood (PPML) method that accounts for heteroskedastic errors (Silva and Tenreyro, 2006). We will need some data on the number of visits from <span class="math inline">i</span> to <span class="math inline">j</span>. So this is some park level information on annual visits generally from across the world. This is difficult to do for all parks globally. But suppose you can do it for some subset of parks that are representative of all parks (externally valid). Then you can estimate the above model and use the <span class="math inline">\beta</span> coefficents as a calibration method to extrapolate the number of visitations <span class="math inline">V</span> for each park given attributes that are known globally about <span class="math inline">M_i</span> and <span class="math inline">M_j</span> and our estimated distance between the two locations.</p>
+<p>At the end of this exercise, we will have the number of estimated visits from each park to each grid cell. This allows us to generate:</p>
+<ol type="1">
+<li>The total number of visitations to each park.</li>
+<li>The total visitations from each grid cell.</li>
+</ol>
+<p>Ideally, we can validate our results for each with some aggregated data on park vistations from tourism and park services for parks and from cities. This should add to the credibility of our estimates for the quantity of visitors.</p>
+<p>In the end, for GEP we will just need to aggregate up the number of visits by <em>parks</em> to get the <span class="math inline">Q</span> in the forumla for each country. We should use park value (rather than grid values) because that is where the ecosystem service is being derived from. So we don’t actually care where the visitor comes from. What we care about is where they go. That is where the production value is being produced (and quinsendentally consumed as this is a non-tradeable good).</p>
+<p>A Suggestion by Steve: Do a zonal calculation. Only consider people within a certian proximity of each park rather than the whole world. This relies on the assumption that after a certain buffer, travel to a PA is prohibitive (either in expense or legally).</p>
+</section>
+<section id="estimating-price-p-1" class="level3">
+<h3 class="anchored" data-anchor-id="estimating-price-p-1">Estimating Price <span class="math inline">P</span></h3>
+<ul>
+<li>Main issues: (1) We do not observe prices for park visitors, and (2) most recreation areas are often free access or subsidized so we have a non-market good to consider.</li>
+</ul>
+<p>The underlying principle to estimate the price for recreation is to measure a Willingness to Pay (WTP) through revealed preference of travel cost. The underlying assumption in this setting is that the primary determinate of visiting a park is distance. So the further the distance, the more valuable the park must be to the visitor. Note that this can be confirmed from the gravity model in the previous section using <span class="math inline">\beta_3</span>. This should be the largest coefficient relative to observable attributes in <span class="math inline">M_i</span> and <span class="math inline">M_j</span>. If it is not, then distance is not the main driver of revealed preferences.</p>
+<p>A nice attribute of travel cost is that we can associate this cost to known costs of travel in monetary terms. So, persume (naively) that everyone drives or flies to get to their destination. Then we can use gasoline prices as a measure of cost and multiply that by the distance traveled. You can imagine how this could be refined. In this way, we avoid the infeasible necessity to use a survey method for visitors to report costs. This can be a way to validate our cost measures if there are parks/studies with this information. Such an exercise would be designed to change the travel costs to better reflected survey reports to total cost. So you could imagine the following simple regression to go beyond a basic gas prices <span class="math inline">\times</span> distance measure.</p>
+<p><span class="math display">
+C_{ij} = \alpha_0 + \alpha_1 G_{i} \times D_{ij} + \alpha_2 X_{i} + \varepsilon
+</span></p>
+<ul>
+<li><span class="math inline">C</span>: Cost paid by visitor <span class="math inline">i</span> to go to <span class="math inline">j</span></li>
+<li><span class="math inline">G</span>: Gas prices paid by visitor <span class="math inline">i</span></li>
+<li><span class="math inline">D</span>: Distance for visitor <span class="math inline">i</span> to <span class="math inline">j</span></li>
+<li><span class="math inline">X</span>: Any other costs that are reported</li>
+</ul>
+<p>From this regression, what can use from the subset of survey data is determine the influence of gas and distance <span class="math inline">\alpha_1</span> relative to the importance of all other costs <span class="math inline">\alpha_2</span>. We can also confirm in this way that gas costs from distance is the main travel cost. We know the distance and gas globally, but not the other information. So we can try to measure the porportional importance of other costs to total cost. Say something as simple as <span class="math inline">\frac{D}{C}</span> as a probability weight for portion of cost attributable to distance. Flip this an we can re-weight all of our travel costs with an inverse probability weight. Namely, <span class="math inline">w = \frac{1}{\frac{D}{C}} = \frac{C}{D}</span>.</p>
+<p>From here forward I am laying out the groundwork for backing out the WTP measure in monetary terms. In case it gets lost in my explanation, the core aspect we care about is likelihood to visit determined by importance of income net of travel costs. This should give us the price for any given park as determined by distance.</p>
+<p>Let us start with a discrete choice model. In this model, visitor <span class="math inline">n</span> is selecting which park <span class="math inline">j</span> they would like to visit. In any time <span class="math inline">t</span> they can only select one park <span class="math inline">j</span> from the set of parks <span class="math inline">J</span>. We observe ex-post where a person has choosen to visit. So we will develop a behavioral model to describe why they made that choice using observable attributes about the individual visitor and the selection of parks avaliable to them.</p>
+<p>Let us start with a random utility model (REM). The visitor has observed attributes <span class="math inline">s_n</span>. We will say that these are heterogenous preferences across the population. So if we observe differences in income or being a foreign national we can distinguish visitation by differences in tastes. The visitory selects over alternative parks <span class="math inline">j</span> which have observable attributes <span class="math inline">x_{nj} \forall j \in J</span>. These are things like scenic quality, size of the park, amenities, travel cost to get there, etc. Each visitor recieves some representative utlity for each park they <em>could</em> visit:</p>
+<p><span class="math display">
+V_{nj} = V(x_{nj}, s_n) = \beta'_n x_{nj} \forall j
+</span></p>
+<p><span class="math inline">\beta'_n</span> allows for variation in taste and this is described by an i.i.d. extreme value distribution <span class="math inline">\beta_n \sim f_n(\beta|\Theta)</span>. The <span class="math inline">\beta</span> captures the <span class="math inline">s_n</span> attributes varying across vistors. This is their difference in assigning importance (perference) over different attributes of the park <span class="math inline">x</span>. This is non-deterministic as there is utility from attributes we don’t observe. So this is an indirect utility function. It is a component of the following overall direct utility function:</p>
+<p><span class="math display">
+U_{nj} =  V_{nj} + \varepsilon_{nj}
+</span></p>
+<p>Let us assume that the unobserved attributes as a random vector logistically distributed by <span class="math inline">f(\varepsilon)</span>. The probability that visitor <span class="math inline">n</span> visits park <span class="math inline">i</span> is</p>
+<p><span class="math display">
+P_{ni} = \int \mathbf{1}[\varepsilon_{nj} - \varepsilon_{ni} &lt;  V_{ni} -  V_{nj}] f(\varepsilon) d \varepsilon
+</span></p>
+<p>This simply states that the probability of vistor <span class="math inline">n</span> selecting park <span class="math inline">i</span> to visit is the value obtained from observed attributes is greater in <span class="math inline">i</span> than in all other parks <span class="math inline">j</span> and that this value is greater than the unobserved value for park <span class="math inline">j</span> over park <span class="math inline">i</span>. Note also that this is a CDF.</p>
+<p>We assume that <span class="math inline">\varepsilon</span> is i.i.d. from the extreme value distribution such that:</p>
+<p><span class="math display">
+CDF: F(\varepsilon_{nj}) = 1 - e^{-e^{\varepsilon_{nj}}}
+</span></p>
+<p>Then the realized difference that the random error value for <span class="math inline">j</span> is greater than <span class="math inline">i</span> becomes:</p>
+<p><span class="math display">
+\begin{align}
+\varepsilon^*_{nji} = &amp; \varepsilon_{nj} - \varepsilon_{ni} \\
+F(\varepsilon^*_{nji}) = &amp; \frac{e^{\varepsilon^*_{nji}}}{1 + \varepsilon^*_{nji}}
+\end{align}
+</span></p>
+<p>From here we get the probability of visitor <span class="math inline">n</span> visiting park <span class="math inline">i</span> where <span class="math inline">V_{nj} = \beta'_n x_{nj}</span> as:</p>
+<p><span class="math display">
+P_{ni} = \int \left( \frac{e^{\beta'_n x_{ni}}}{\sum_j e^{ \beta'_n x_{nj}}} \right) f_n(\beta|\Theta) d(\beta)
+</span></p>
+<p>Because we are allowing for taste variation in the population, the above proability does not have a closed form solution (because we do not know the solution to the mixing of several logistical distributions – one <span class="math inline">\varepsilon</span> distribution for each <span class="math inline">\beta</span>). But we can give the probability distrubition some normal form: <span class="math inline">f_n(\beta|\Theta) = f(\beta|\mu, \sigma)</span>. And an advantage here is that we have relaxed the Irrelevance of Independent Alternatives (IIA) assumption - we have correlations between unobserved factors of alternatives.</p>
+<p>We will construct a simulated mixed logit proability through bootstrapping and then place this within a simulated log-likelihood estimator. For the simulated mixed logit, we will do the following steps:</p>
+<ol type="1">
+<li>Draw at <span class="math inline">\beta^r</span> for draw <span class="math inline">r</span> from <span class="math inline">f_n(\beta|\Theta)</span>. This is an observed attribute for visitor <span class="math inline">n \in N</span>.</li>
+<li>Calculate the logit formula for <span class="math inline">P_ni(B^r)</span>. This is the probability the visit park <span class="math inline">i</span> given we observe this attribute about the visitor and all the attributes about the park <span class="math inline">x_j \forall j \in J</span>.</li>
+</ol>
+<p><span class="math display">
+P_ni(B^r) = \frac{e^{B^r x_{ni}}}{\sum_j e^{B^r x_{nj}}}
+</span></p>
+<ol start="3" type="1">
+<li>Re-draw and estimate 1 and 2 <span class="math inline">R</span> times</li>
+<li>Average the results to get simulated probability</li>
+</ol>
+<p><span class="math display">
+\hat{P_{ni}} = \frac{1}{R} \sum_{r=1}^R P_ni(B^r)
+</span></p>
+<p>Now we can place it in the simulated log-likelihood estimator. Set <span class="math inline">y_{ni} = 1</span> when the visitor chooses park <span class="math inline">i</span>. We select the <span class="math inline">\Theta</span> that matches <span class="math inline">(\mu, \sigma)</span> to the observed data using general method of moments. This is the estimator:</p>
+<p><span class="math display">
+SSL = \sum_{n=1}^N \sum_{j=1}^J y_{nj} log(\hat{P_{ni}})
+</span></p>
+<p>In our context, to back out the monetary value of travel cost we need the following indirect utility function that we can vary over time <span class="math inline">t</span>:</p>
+<p><span class="math display">
+V_{njt} = \beta_1 (y_n - c_{njt}) + \varepsilon_{njt}
+</span></p>
+<p><span class="math inline">\beta_1</span> is the WTP price we are after for visitor <span class="math inline">n</span> to park <span class="math inline">j</span> in time <span class="math inline">t</span>. In our case, is the likelihood that a visitor from grid cell <span class="math inline">n</span>. We can add in other attributes we think are correlated with <span class="math inline">\beta_1</span> that may bias it. But in practice, all we need to know is average income <span class="math inline">y</span> and some measure of travel cost <span class="math inline">c</span>.</p>
+</section>
+<section id="adjusting-for-natures-contribution-lambda" class="level3">
+<h3 class="anchored" data-anchor-id="adjusting-for-natures-contribution-lambda">Adjusting for Nature’s Contribution <span class="math inline">\lambda</span></h3>
+<p>Two potential Methods:</p>
+<ol type="1">
+<li>Something out of GTAP or CWON (both by Justin).
+<ul>
+<li>From cobb-douglas production function, <span class="math inline">1 - \alpha - \beta</span>.</li>
+</ul></li>
+<li>Try a hedonic model for land prices
+<ul>
+<li>Value of park land with no development must be the value of nature</li>
+<li>Nothing else can contribute to the value of land in protected area</li>
+<li>Would need to make this a multiplier effect (so portion of the hedonic value attributable to land)</li>
+<li>Issue: Because it is protected land, we do not see land purchases very often. In fact, most valuable land is likely always a protected area.</li>
+</ul></li>
+</ol>
+</section>
+<section id="data-requirements-1" class="level3">
+<h3 class="anchored" data-anchor-id="data-requirements-1">Data Requirements</h3>
+<ol type="1">
 <li>World Protected Areas Database
 <ul>
 <li>Shapefiles for location and size of existing protected areas and when they open (allows for dyanmic component)</li>
@@ -436,368 +495,302 @@ GEP_{i,t} = \lambda \cdot (P_{i,t} \cdot Q_{i,t})
 <ul>
 <li>Assign as the average income (budget constraint) for people in given grid cells</li>
 </ul></li>
-</ul>
-<div class="footer footer-default">
-
-</div>
+<li>Open Street Map
+<ul>
+<li>Average travel distance and time from grid cells to parks</li>
+</ul></li>
+<li>Park Visititation Data
+<ul>
+<li>Natual Park Service, etc.</li>
+<li>Visitation of rates to calibrate visitation model off of.</li>
+</ul></li>
+</ol>
 </section>
-    </div>
-  </div>
+<section id="analysis" class="level3">
+<h3 class="anchored" data-anchor-id="analysis">Analysis</h3>
+<section id="cleaning" class="level4">
+<h4 class="anchored" data-anchor-id="cleaning">Cleaning</h4>
+<ol type="1">
+<li>Clean raw datasets</li>
+<li>Merge attributes of parks with park level info</li>
+<li>Merge population gridded data with attributes about consumers (income)</li>
+</ol>
+</section>
+<section id="estimate-grid-cell-components" class="level4">
+<h4 class="anchored" data-anchor-id="estimate-grid-cell-components">Estimate Grid Cell Components</h4>
+<ol start="4" type="1">
+<li>Estimate distance from gridded cells to parks (Euclidean distance, or OSM distance)</li>
+<li>Estimate propensity for visits by grid cells</li>
+<li>Calibrate propensity for visits = quantity of visitors per park</li>
+<li>Estimate WTP for visitors in each grid cell to each park</li>
+<li>Back out price using WTP, income, and travel cost = price for visitors for park-grid cell pairs</li>
+</ol>
+</section>
+<section id="estimate-gep" class="level4">
+<h4 class="anchored" data-anchor-id="estimate-gep">Estimate GEP</h4>
+<ol type="1">
+<li>Multiply grid cell price-to-park with grid cell visitor-to-park <span class="math inline">\times</span> nature’s contribution adjustment = GEP value to visit all parks from that grid cell</li>
+<li>Aggregate grid cell value for a nation in a year = <span class="math inline">GEP_{i,t}</span> = Export panel data</li>
+</ol>
+</section>
+</section>
+</section>
+</section>
+<section id="output" class="level1">
+<h1>Output</h1>
+<ol type="1">
+<li>A panel data set of GEP values for country and year we can hand to Justin &amp; Steve</li>
+<li>Map showing the gridded population overlayed on protected areas (Method)</li>
+<li>Map (or table) showing grid cell values for total visitor count and average WTP (Origin)</li>
+<li>Map (or table) showing parks total visitor count and average WTP (Destination)</li>
+<li>Time series of GEP value</li>
+<li>Some comparision (ground truth table) of recreation GEP value to GDP value (World bank measure)
+<ul>
+<li>https://www.unwto.org/tourism-statistics/economic-contribution-SDG</li>
+<li>https://wdi.worldbank.org/table/6.14</li>
+<li>https://data.worldbank.org/indicator/ST.INT.RCPT.CD</li>
+<li>https://data.oecd.org/industry/tourism-gdp.htm</li>
+</ul></li>
+</ol>
+</section>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="prez_general_240920_files/libs/revealjs/dist/reveal.js"></script>
-  <!-- reveal.js plugins -->
-  <script src="prez_general_240920_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="prez_general_240920_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="prez_general_240920_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="prez_general_240920_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="prez_general_240920_files/libs/revealjs/plugin/quarto-support/support.js"></script>
-  
-
-  <script src="prez_general_240920_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="prez_general_240920_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="prez_general_240920_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="prez_general_240920_files/libs/revealjs/plugin/math/math.js"></script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
-
-  <script>
-
-      // Full list of configuration options available at:
-      // https://revealjs.com/config/
-      Reveal.initialize({
-'controlsAuto': true,
-'previewLinksAuto': false,
-'smaller': false,
-'pdfSeparateFragments': false,
-'autoAnimateEasing': "ease",
-'autoAnimateDuration': 1,
-'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'smaller': false,
- 
-        // Display controls in the bottom right corner
-        controls: false,
-
-        // Help the user learn the controls by providing hints, for example by
-        // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: false,
-
-        // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'edges',
-
-        // Visibility rule for backwards navigation arrows; "faded", "hidden"
-        // or "visible"
-        controlsBackArrows: 'faded',
-
-        // Display a presentation progress bar
-        progress: true,
-
-        // Display the page number of the current slide
-        slideNumber: false,
-
-        // 'all', 'print', or 'speaker'
-        showSlideNumber: 'all',
-
-        // Add the current slide number to the URL hash so that reloading the
-        // page/copying the URL will return you to the same slide
-        hash: true,
-
-        // Start with 1 for the hash rather than 0
-        hashOneBasedIndex: false,
-
-        // Flags if we should monitor the hash and change slides accordingly
-        respondToHashChanges: true,
-
-        // Push each slide change to the browser history
-        history: true,
-
-        // Enable keyboard shortcuts for navigation
-        keyboard: true,
-
-        // Enable the slide overview mode
-        overview: true,
-
-        // Disables the default reveal.js slide layout (scaling and centering)
-        // so that you can use custom CSS layout
-        disableLayout: false,
-
-        // Vertical centering of slides
-        center: false,
-
-        // Enables touch navigation on devices with touch input
-        touch: true,
-
-        // Loop the presentation
-        loop: false,
-
-        // Change the presentation direction to be RTL
-        rtl: false,
-
-        // see https://revealjs.com/vertical-slides/#navigation-mode
-        navigationMode: 'linear',
-
-        // Randomizes the order of slides each time the presentation loads
-        shuffle: false,
-
-        // Turns fragments on and off globally
-        fragments: true,
-
-        // Flags whether to include the current fragment in the URL,
-        // so that reloading brings you to the same fragment position
-        fragmentInURL: false,
-
-        // Flags if the presentation is running in an embedded mode,
-        // i.e. contained within a limited portion of the screen
-        embedded: false,
-
-        // Flags if we should show a help overlay when the questionmark
-        // key is pressed
-        help: true,
-
-        // Flags if it should be possible to pause the presentation (blackout)
-        pause: true,
-
-        // Flags if speaker notes should be visible to all viewers
-        showNotes: false,
-
-        // Global override for autoplaying embedded media (null/true/false)
-        autoPlayMedia: null,
-
-        // Global override for preloading lazy-loaded iframes (null/true/false)
-        preloadIframes: null,
-
-        // Number of milliseconds between automatically proceeding to the
-        // next slide, disabled when set to 0, this value can be overwritten
-        // by using a data-autoslide attribute on your slides
-        autoSlide: 0,
-
-        // Stop auto-sliding after user input
-        autoSlideStoppable: true,
-
-        // Use this method for navigation when auto-sliding
-        autoSlideMethod: null,
-
-        // Specify the average time in seconds that you think you will spend
-        // presenting each slide. This is used to show a pacing timer in the
-        // speaker view
-        defaultTiming: null,
-
-        // Enable slide navigation via mouse wheel
-        mouseWheel: false,
-
-        // The display mode that will be used to show slides
-        display: 'block',
-
-        // Hide cursor if inactive
-        hideInactiveCursor: true,
-
-        // Time before the cursor is hidden (in ms)
-        hideCursorTime: 5000,
-
-        // Opens links in an iframe preview overlay
-        previewLinks: false,
-
-        // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
-
-        // Transition speed (default/fast/slow)
-        transitionSpeed: 'default',
-
-        // Transition style for full page slide backgrounds
-        // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
-
-        // Number of slides away from the current that are visible
-        viewDistance: 3,
-
-        // Number of slides away from the current that are visible on mobile
-        // devices. It is advisable to set this to a lower number than
-        // viewDistance in order to save resources.
-        mobileViewDistance: 2,
-
-        // The "normal" size of the presentation, aspect ratio will be preserved
-        // when the presentation is scaled to fit different resolutions. Can be
-        // specified using percentage units.
-        width: 1050,
-
-        height: 700,
-
-        // Factor of the display size that should remain empty around the content
-        margin: 0.1,
-
-        math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
-          config: 'TeX-AMS_HTML-full',
-          tex2jax: {
-            inlineMath: [['\\(','\\)']],
-            displayMath: [['\\[','\\]']],
-            balanceBraces: true,
-            processEscapes: false,
-            processRefs: true,
-            processEnvironments: true,
-            preview: 'TeX',
-            skipTags: ['script','noscript','style','textarea','pre','code'],
-            ignoreClass: 'tex2jax_ignore',
-            processClass: 'tex2jax_process'
-          },
-        },
-
-        // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
-
-          RevealMath,
-          RevealNotes,
-          RevealSearch,
-          RevealZoom
-        ]
-      });
-    </script>
-    <script id="quarto-html-after-body" type="application/javascript">
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-      const toggleBodyColorMode = (bsSheetEl) => {
-        const mode = bsSheetEl.getAttribute("data-mode");
-        const bodyEl = window.document.querySelector("body");
-        if (mode === "dark") {
-          bodyEl.classList.add("quarto-dark");
-          bodyEl.classList.remove("quarto-light");
-        } else {
-          bodyEl.classList.add("quarto-light");
-          bodyEl.classList.remove("quarto-dark");
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
       }
-      const toggleBodyColorPrimary = () => {
-        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-        if (bsSheetEl) {
-          toggleBodyColorMode(bsSheetEl);
-        }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
       }
-      toggleBodyColorPrimary();  
-      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-      tabsets.forEach(function(tabset) {
-        const tabby = new Tabby('#' + tabset.id);
-      });
-      const isCodeAnnotation = (el) => {
-        for (const clz of el.classList) {
-          if (clz.startsWith('code-annotation-')) {                     
-            return true;
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
           }
-        }
-        return false;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
           }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
-        // button target
-        const button = e.trigger;
-        // don't keep focus
-        button.blur();
-        // flash "checked"
-        button.classList.add('code-copy-button-checked');
-        var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
-        let tooltip;
-        if (window.bootstrap) {
-          button.setAttribute("data-bs-toggle", "tooltip");
-          button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
-          tooltip = new bootstrap.Tooltip(button, 
-            { trigger: "manual", 
-              customClass: "code-copy-button-tooltip",
-              offset: [0, -8]});
-          tooltip.show();    
-        }
-        setTimeout(function() {
-          if (tooltip) {
-            tooltip.hide();
-            button.removeAttribute("data-bs-title");
-            button.removeAttribute("data-bs-toggle");
-            button.removeAttribute("data-bs-placement");
-          }
-          button.setAttribute("title", currentTitle);
-          button.classList.remove('code-copy-button-checked');
-        }, 1000);
-        // clear code selection
-        e.clearSelection();
-      });
-      function tippyHover(el, contentFn) {
-        const config = {
-          allowHTML: true,
-          content: contentFn,
-          maxWidth: 500,
-          delay: 100,
-          arrow: false,
-          appendTo: function(el) {
-              return el.closest('section.slide') || el.parentElement;
-          },
-          interactive: true,
-          interactiveBorder: 10,
-          theme: 'light-border',
-          placement: 'bottom-start'
-        };
-          config['offset'] = [0,0];
-          config['maxWidth'] = 700;
-        window.tippy(el, config); 
-      }
-      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-      for (var i=0; i<noterefs.length; i++) {
-        const ref = noterefs[i];
-        tippyHover(ref, function() {
-          // use id or data attribute instead here
-          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-          try { href = new URL(href).hash; } catch {}
-          const id = href.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          return note.innerHTML;
-        });
-      }
-      const findCites = (el) => {
-        const parentEl = el.parentElement;
-        if (parentEl) {
-          const cites = parentEl.dataset.cites;
-          if (cites) {
-            return {
-              el,
-              cites: cites.split(' ')
-            };
-          } else {
-            return findCites(el.parentElement)
-          }
-        } else {
-          return undefined;
+          selectedAnnoteEl = annoteEl;
         }
       };
-      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-      for (var i=0; i<bibliorefs.length; i++) {
-        const ref = bibliorefs[i];
-        const citeInfo = findCites(ref);
-        if (citeInfo) {
-          tippyHover(citeInfo.el, function() {
-            var popup = window.document.createElement('div');
-            citeInfo.cites.forEach(function(cite) {
-              var citeDiv = window.document.createElement('div');
-              citeDiv.classList.add('hanging-indent');
-              citeDiv.classList.add('csl-entry');
-              var biblioDiv = window.document.getElementById('ref-' + cite);
-              if (biblioDiv) {
-                citeDiv.innerHTML = biblioDiv.innerHTML;
-              }
-              popup.appendChild(citeDiv);
-            });
-            return popup.innerHTML;
-          });
-        }
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
       }
-    });
-    </script>
-    
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
 
 </body></html>
