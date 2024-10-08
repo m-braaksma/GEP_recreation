@@ -37,6 +37,7 @@ format:
 
 # Components of Recreation GEP
 
+
 - Nature-based recreation can be sub-divided by the type of recreation (park, camping, beach, lake activites, eco-tourism, etc.). 
 - The key distinction for nature-based recreation is that these are activities where the main attraction (or attribute deriving utility) comers from nature. 
 - For our purposes, we can start by narrowing our examination to camping or hiking recreation in protected areas. But in general, we can modify the following approach to consider a wider definition of nature-based recreation. 
