@@ -30,6 +30,8 @@ def fun_clean_expenses(df):
     
     # Replace exact zeros with missing values
     df_long["expense"].replace(0, np.nan, inplace=True)
+
+    # Drop unmatched countries 
     
     # Rescale for million dollar units
     df_long["expense"] = df_long["expense"].astype(float) * 1e6
@@ -43,4 +45,4 @@ df_unwto_expenses = pd.read_excel("../data/unwto-inbound-tourism-expenditure.xls
 df_unwto_expenses = fun_clean_expenses(df_unwto_expenses)
 
 # Export cleaned data
-df_unwto_expenses.to_csv("../data/unwto-expenses-cleaned.csv", index=False)
+df_unwto_expenses.to_csv("../intermediate/unwto-expenses-cleaned.csv", index=False)
