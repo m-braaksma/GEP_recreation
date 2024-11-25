@@ -77,6 +77,8 @@ nature_contribution_factor = 0.75
 nature_tourism['gep_from_exp'] = nature_tourism['expense'] * nature_tourism['percentage_tourism_area'] * nature_contribution_factor
 nature_tourism['gep_from_gdp'] = nature_tourism['gdp_tourism_usd'] * nature_tourism['percentage_tourism_area'] * nature_contribution_factor
 
+nature_tourism.to_csv('intermediate/nbt_gep_panel.csv', index=False) 
+
 # ===============================
 # 6. Visualizations
 # ===============================
@@ -165,11 +167,10 @@ ax = mapping_gdf.plot(
     legend_kwds={
         "label": "Percentage of Protected Areas",
         "orientation": "horizontal",
-        'shrink': 0.6,
-    }
+        'shrink': 0.6}
 )
 ax.set_axis_off()
 ax.set_title('Percentage of Tourism Expenditure Attributed to Nature\nBased on Area of Protected Areas', fontsize=12)
-plt.savefig('figures/percentage_tourism_map.png', format="png", bbox_inches="tight")
+plt.savefig('figures/percentage_tourism_map.png', format="png", bbox_inches="tight", dpi=400)
 plt.close()
 
